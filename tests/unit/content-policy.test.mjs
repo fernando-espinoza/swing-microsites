@@ -30,3 +30,11 @@ test('source checksum, missing bytes, traversal, escaping symlinks are rejected'
   await symlink('/etc/hosts',join(root,'escape.jpg')); await assert.rejects(verifySources([{...a,sourcePath:'escape.jpg'}],root));
  }finally {await rm(root,{recursive:true,force:true});}
 });
+
+test('film dimensions must be positive safe integers',async()=>{
+ const site=await loadSite();
+ for(const key of ['width','height'])for(const value of ['720" onloadedmetadata="alert(1)', '720', 0, -1, 1.5, null, Infinity, Number.MAX_SAFE_INTEGER+1]){
+  const changed=structuredClone(site);changed.films[0][key]=value;
+  assert.throws(()=>validateSite(changed),/film/);
+ }
+});

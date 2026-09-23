@@ -15,8 +15,8 @@ test('image request failure preserves geometry and alternative text',async({page
  await page.route('**/C04-*',r=>r.abort());await page.goto('/campaign/johnmontgomery/');const image=page.locator('img[data-asset-id="C04"]');await image.scrollIntoViewIfNeeded();
  await expect.poll(()=>image.evaluate(i=>i.complete)).toBe(true);const state=await image.evaluate(i=>({natural:i.naturalWidth,alt:i.alt,height:i.getBoundingClientRect().height}));expect(state.natural).toBe(0);expect(state.alt).toContain('Cream');expect(state.height).toBeGreaterThan(100);
 });
-test('200 percent text and unavailable webfonts preserve readable content',async({page})=>{
- await page.setViewportSize({width:640,height:900});await page.route('**/*.woff2',r=>r.abort());await page.goto('/campaign/johnmontgomery/');
+for(const width of [320,390,640])test('200 percent text and unavailable webfonts preserve readable content at '+width,async({page})=>{
+ await page.setViewportSize({width,height:900});await page.route('**/*.woff2',r=>r.abort());await page.goto('/campaign/johnmontgomery/');
  await page.evaluate(()=>{const elements=[...document.querySelectorAll('h1,h2,h3,p,a,figcaption,.wordmark,.partner-name')];const sizes=elements.map(e=>parseFloat(getComputedStyle(e).fontSize));elements.forEach((e,i)=>e.style.fontSize=(sizes[i]*2)+'px');});
  expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);await expect(page.locator('h1')).toBeVisible();await expect(page.locator('#products h3')).toHaveCount(3);
 });

@@ -8,7 +8,7 @@
 .swing-campaign .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 .swing-campaign .skip-link{position:fixed;z-index:10;left:16px;top:16px;padding:14px 22px;background:white;transform:translateY(-180%)}
 .swing-campaign .skip-link:focus{transform:none}
-.swing-campaign .masthead{display:flex;align-items:center;justify-content:center;gap:26px;max-width:1312px;margin:auto;padding:29px 24px 25px;border-bottom:1px solid var(--rule)}
+.swing-campaign .masthead{display:flex;flex-wrap:wrap;text-align:center;align-items:center;justify-content:center;gap:26px;max-width:1312px;margin:auto;padding:29px 24px 25px;border-bottom:1px solid var(--rule)}
 .swing-campaign .wordmark{font-family:var(--script);font-style:italic;font-weight:600;font-size:43px;line-height:1.1;letter-spacing:-2px}
 .swing-campaign .collab-cross{font-size:16px;font-weight:400}
 .swing-campaign .partner-name{font-size:23px;letter-spacing:-.7px}
@@ -69,12 +69,12 @@
 @media(prefers-reduced-motion:reduce){.swing-campaign *{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 .swing-campaign [hidden]{display:none!important}
 .swing-campaign .film-band{background:var(--navy);color:white;padding:72px 64px}
-.swing-campaign .film-inner{max-width:1000px;margin:auto;display:grid;grid-template-columns:1fr 330px;gap:100px;align-items:center}
+.swing-campaign .film-inner{max-width:1000px;margin:auto;display:grid;grid-template-columns:minmax(0,1fr) 330px;gap:100px;align-items:center}
 .swing-campaign .film-title{font-family:var(--script);font-style:italic;font-size:110px;line-height:.95;letter-spacing:-.06em;margin:35px 0}
 .swing-campaign .film-intro{max-width:30ch;font-size:20px;line-height:1.6}
 .swing-campaign .film-frame video{display:block;width:100%;height:auto;background:var(--navy)}
 .swing-campaign .film-frame figcaption{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;font-size:12px;line-height:1.5;margin-top:14px}
-@media(max-width:767px){.swing-campaign .film-band{padding:50px 24px}.swing-campaign .film-inner{grid-template-columns:1fr;gap:35px;max-width:540px}.swing-campaign .film-title{font-size:80px;margin:25px 0}.swing-campaign .film-title br{display:none}.swing-campaign .film-title br:after{content:' '}.swing-campaign .film-frame{max-width:330px;width:100%;justify-self:center}.swing-campaign .film-intro{font-size:18px}}
+@media(max-width:767px){.swing-campaign .film-band{padding:50px 24px}.swing-campaign .film-inner{grid-template-columns:minmax(0,1fr);gap:35px;max-width:540px}.swing-campaign .film-title{font-size:80px;margin:25px 0}.swing-campaign .film-title br{display:none}.swing-campaign .film-title br:after{content:' '}.swing-campaign .film-frame{max-width:330px;width:100%;justify-self:center}.swing-campaign .film-intro{font-size:18px}}
 .swing-campaign .products-intro{position:relative;margin-bottom:55px;padding-bottom:35px;border-bottom:1px solid var(--rule)}
 .swing-campaign .products-intro h2{font-size:80px;font-weight:400;line-height:1.1;letter-spacing:-.055em;margin-top:20px}
 .swing-campaign .selection-number{position:absolute;right:0;bottom:48px;font-size:13px;letter-spacing:.15em}
@@ -91,3 +91,5 @@
 .swing-campaign .campaign-colophon .wordmark{font-size:32px}.swing-campaign .campaign-colophon>p{font-size:16px}.swing-campaign .edition-signature{font-style:italic;margin-left:auto;font-size:17px}
 @media(max-width:767px){.swing-campaign .products-intro{margin-bottom:35px;padding-bottom:28px}.swing-campaign .products-intro h2{font-size:56px}.swing-campaign .selection-number{display:none}.swing-campaign .products-grid{grid-template-columns:1fr;gap:45px;max-width:540px;margin:auto}.swing-campaign .product-views{gap:12px}.swing-campaign .product-title h3{font-size:34px}.swing-campaign .product-description{max-width:none}.swing-campaign .campaign-colophon{flex-wrap:wrap;gap:10px;margin-top:40px}.swing-campaign .edition-signature{font-size:14px}.swing-campaign .campaign-colophon>p{font-size:14px}}
 @media(max-width:350px){.swing-campaign .product-views{grid-template-columns:1fr;gap:22px}.swing-campaign .product-back{width:70%;justify-self:end}.swing-campaign .edition-signature{flex-basis:100%;margin-top:8px}.swing-campaign .film-title{font-size:68px}}
+
+.swing-campaign .film-copy,.swing-campaign .partner-name{min-width:0;overflow-wrap:anywhere}
