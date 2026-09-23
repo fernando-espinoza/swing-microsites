@@ -1,0 +1,10 @@
+.worktrees/
+.superpowers/
+node_modules/
+dist/
+assets-source/
+test-results/
+playwright-report/
+.env*
+!.env.example
+.DS_Store
