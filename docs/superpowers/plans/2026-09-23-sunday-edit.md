@@ -10,7 +10,7 @@
 
 **Spec:** [Proposed design](../specs/2026-09-23-sunday-edit-design.md). Read it and the [source inventory](../reference/2026-09-23-asset-inventory.json) before any task.
 
-**Status:** Detailed proposed plan, prepared at the user’s explicit request. This is not an implemented website. Font choices, film usability, and final creative approval remain review gates. No deployment or parent-site changes are included.
+**Status:** Approved for native execution on 2026-09-23. Implementation and automated QA are complete subject to final branch review; see ../../sunday-edit/qa.md. Licensed typography, final creative approval, and real-device checks remain release gates. No deployment or parent-site changes are included.
 
 ## Global Constraints
 
@@ -166,9 +166,9 @@ Keep films empty during the image-only structure work. Add a Film record to camp
 **Consumes:** Source snapshots and the reviewKey/Drive-ID/checksum inventory.  
 **Produces:** `Site`, `validateSite`, `validateProductUrl`, `verifySources`; reviewed content contract used by all later tasks.
 
-- [ ] **1.1 Recheck the workspace.** Run `git status --short`, `git branch --show-current`, and inspect any new AGENTS.md. Use the worktree skill at execution time if isolation is needed. Do not discard work.
+- [x] **1.1 Recheck the workspace.** Run `git status --short`, `git branch --show-current`, and inspect any new AGENTS.md. Use the worktree skill at execution time if isolation is needed. Do not discard work.
 - [ ] **1.2 Resolve typography ownership.** Record the user’s answer about fonts/text lockup in `review.json`. Obtain licensed local WOFF2 files before final styling approval, or record an explicitly approved substitute. No guessed font downloads.
-- [ ] **1.3 Create the minimum package and scripts.** Use Node 24; add exact build/test dependencies with the lockfile. Package scripts are:
+- [x] **1.3 Create the minimum package and scripts.** Use Node 24; add exact build/test dependencies with the lockfile. Package scripts are:
   ```json
   {
     "type": "module",
@@ -184,7 +184,7 @@ Keep films empty during the image-only structure work. Add a Film record to camp
   }
   ```
   Keep runtime `dependencies` empty; use `npm install --save-dev --save-exact sharp @playwright/test @axe-core/playwright` and verify the resolved packages support the chosen Node version. Ignore `node_modules/`, `dist/`, `assets-source/`, `test-results/`, `playwright-report/`, and secret environment files.
-- [ ] **1.4 Write policy tests before the validator.**
+- [x] **1.4 Write policy tests before the validator.**
   ```js
   import test from 'node:test';
   import assert from 'node:assert/strict';
@@ -209,8 +209,8 @@ Keep films empty during the image-only structure work. Add a Film record to camp
   });
   ```
   That product URL is a test fixture only; never put it in campaign data.
-- [ ] **1.5 Run the test and observe the missing-module/function failure.** Command: `node --test tests/unit/content-policy.test.mjs`.
-- [ ] **1.6 Implement strict URL validation.**
+- [x] **1.5 Run the test and observe the missing-module/function failure.** Command: `node --test tests/unit/content-policy.test.mjs`.
+- [x] **1.6 Implement strict URL validation.**
   ```js
   export function validateProductUrl(value, approved) {
     if (value === null) return null;
@@ -227,10 +227,10 @@ Keep films empty during the image-only structure work. Add a Film record to camp
   }
   ```
   Add tests rejecting bare relative paths and credentials on the allowed host. Future query parameters require an explicit policy revision and tests.
-- [ ] **1.7 Populate exact content.** Copy all three descriptions from the CSV snapshot without paraphrase. Set all three href values to null. Use the brief’s exact supporting sentence until proposed story copy is approved. Record C06 retention approval. Map “Lusia back.webp” to P05’s actual “Luisa back.webp”.
-- [ ] **1.8 Validate completeness.** Derive used image IDs from `layout.hero`, every spread, `layout.story`, and every product’s front/back fields. Require exact set equality with the 30 image IDs; reject duplicate/unknown asset IDs, empty alt text, invalid dimensions, and missing approval records. Lock the three product IDs/names and source descriptions to the snapshot. Test removing C06, omitting P05, and substituting an unknown Drive ID; each must fail with the specific ID in the error.
-- [ ] **1.9 Verify source bytes.** Load only paths contained within `assets-source/sunday-edit/`; reject traversal, symlinks escaping the directory, and files with a changed SHA-256. Test a temporary file with changed bytes and a path `../outside.jpg`; both must fail. Use Node `crypto.createHash('sha256')` on actual file bytes.
-- [ ] **1.10 Run policy tests and commit the deliverable.** `npm run test:unit` must pass. Review the diff for credentials/temporary signed URLs. Commit message: `feat: define approved Sunday Edit content and asset policy`.
+- [x] **1.7 Populate exact content.** Copy all three descriptions from the CSV snapshot without paraphrase. Set all three href values to null. Use the brief’s exact supporting sentence until proposed story copy is approved. Record C06 retention approval. Map “Lusia back.webp” to P05’s actual “Luisa back.webp”.
+- [x] **1.8 Validate completeness.** Derive used image IDs from `layout.hero`, every spread, `layout.story`, and every product’s front/back fields. Require exact set equality with the 30 image IDs; reject duplicate/unknown asset IDs, empty alt text, invalid dimensions, and missing approval records. Lock the three product IDs/names and source descriptions to the snapshot. Test removing C06, omitting P05, and substituting an unknown Drive ID; each must fail with the specific ID in the error.
+- [x] **1.9 Verify source bytes.** Load only paths contained within `assets-source/sunday-edit/`; reject traversal, symlinks escaping the directory, and files with a changed SHA-256. Test a temporary file with changed bytes and a path `../outside.jpg`; both must fail. Use Node `crypto.createHash('sha256')` on actual file bytes.
+- [x] **1.10 Run policy tests and commit the deliverable.** `npm run test:unit` must pass. Review the diff for credentials/temporary signed URLs. Commit message: `feat: define approved Sunday Edit content and asset policy`.
 
 ## Task 2: Prepare traceable, responsive media
 
@@ -239,8 +239,8 @@ Keep films empty during the image-only structure work. Add a Film record to camp
 **Consumes:** `Asset[]`, `verifySources`, inventory; local originals obtained through authenticated Drive downloads.  
 **Produces:** `PreparedImage` map and a local generated media manifest consumed by the renderer.
 
-- [ ] **2.1 Fetch only inventory assets to ignored source storage.** Verify every source hash before processing. Reuse verified local originals if available; do not rely on this planning session’s temporary directory. Record newly changed source revisions for review rather than automatically updating hashes.
-- [ ] **2.2 Write a derivative test with a small temporary fixture.**
+- [x] **2.1 Fetch only inventory assets to ignored source storage.** Verify every source hash before processing. Reuse verified local originals if available; do not rely on this planning session’s temporary directory. Record newly changed source revisions for review rather than automatically updating hashes.
+- [x] **2.2 Write a derivative test with a small temporary fixture.**
   ```js
   import test from 'node:test';
   import assert from 'node:assert/strict';
@@ -271,17 +271,17 @@ Keep films empty during the image-only structure work. Add a Film record to camp
   });
   ```
   Synthetic fixtures are test-only bytes; they never enter campaign media.
-- [ ] **2.3 Observe the failing test**, then implement image processing. Use `sharp(input).rotate().resize({width, withoutEnlargement:true})` and preserve color correctly. Width candidates: 320, 480, 640, 960, 1280, 1600, filtered to the original width plus a native-width candidate where needed; deduplicate widths. Use WebP quality 82 and JPEG quality 85 as starting points, then inspect actual results. Derivative names include source ID, width, format, and a hash of output bytes.
-- [ ] **2.4 Record metadata from generated bytes.** Each variant gets its real width, height, byte length, and normalized local path. Copy originals nowhere into dist. Fail on corrupt sources, unknown output extensions, or any path escape. Add a test that corrupt JPEG bytes produce a named failure instead of a blank image.
-- [ ] **2.5 Review all six clips.** Read the [planning asset review](../reference/2026-09-23-asset-review.md). Planning metadata can be read but local frame decoding failed; do not assume damage or successful playback. Test each source in a browser/media decoder, watch the full candidates, and record duration, orientation, UI overlays, sound, and caption needs. Prefer one clean vertical film between spreads 3 and 4. Other usable clips may appear after spreads 1 and 6, but all six videos are not mandatory. If none is usable, keep the photographic design and request a clean supplied replacement before claiming the film requirement complete.
-- [ ] **2.6 Make web derivatives only from an approved clip.** Use a documented local encoder to create H.264 MP4, yuv420p, fast-start metadata, and at most 720px width without enlargement. Strip audio for the proposed atmospheric treatment; preserve the original. Record exact source/time range and a source-derived poster. Do not add music, new frames, retouching, or substitute imagery. A typical command, once the reviewed source path is entered:
+- [x] **2.3 Observe the failing test**, then implement image processing. Use `sharp(input).rotate().resize({width, withoutEnlargement:true})` and preserve color correctly. Width candidates: 320, 480, 640, 960, 1280, 1600, filtered to the original width plus a native-width candidate where needed; deduplicate widths. Use WebP quality 82 and JPEG quality 85 as starting points, then inspect actual results. Derivative names include source ID, width, format, and a hash of output bytes.
+- [x] **2.4 Record metadata from generated bytes.** Each variant gets its real width, height, byte length, and normalized local path. Copy originals nowhere into dist. Fail on corrupt sources, unknown output extensions, or any path escape. Add a test that corrupt JPEG bytes produce a named failure instead of a blank image.
+- [x] **2.5 Review all six clips.** Read the [planning asset review](../reference/2026-09-23-asset-review.md). Planning metadata can be read but local frame decoding failed; do not assume damage or successful playback. Test each source in a browser/media decoder, watch the full candidates, and record duration, orientation, UI overlays, sound, and caption needs. Prefer one clean vertical film between spreads 3 and 4. Other usable clips may appear after spreads 1 and 6, but all six videos are not mandatory. If none is usable, keep the photographic design and request a clean supplied replacement before claiming the film requirement complete.
+- [x] **2.6 Make web derivatives only from an approved clip.** Use a documented local encoder to create H.264 MP4, yuv420p, fast-start metadata, and at most 720px width without enlargement. Strip audio for the proposed atmospheric treatment; preserve the original. Record exact source/time range and a source-derived poster. Do not add music, new frames, retouching, or substitute imagery. A typical command, once the reviewed source path is entered:
   ```sh
   ffmpeg -i assets-source/sunday-edit/approved-film.mp4 -an \
     -vf "scale='min(720,iw)':-2" -c:v libx264 -crf 23 \
     -pix_fmt yuv420p -movflags +faststart generated-film.mp4
   ```
   `approved-film.mp4` is a local alias to a recorded inventory ID, not a new asset source. Rename/hash the final derivative through the same output policy. Do not install an encoder or select a film implicitly during plan review.
-- [ ] **2.7 Run media tests and inspect contact sheets.** Check all 30 image derivatives against originals, particularly C06’s unchanged wordmark and complete product silhouettes. Target under 8 MiB of selected image sources transferred during a full-page visit at one viewport; do not sum every alternative encoding in storage against that transfer budget. Commit code/manifests and review records, not temporary authenticated URLs. Commit message: `feat: prepare verified responsive campaign media`.
+- [x] **2.7 Run media tests and inspect contact sheets.** Check all 30 image derivatives against originals, particularly C06’s unchanged wordmark and complete product silhouettes. Target under 8 MiB of selected image sources transferred during a full-page visit at one viewport; do not sum every alternative encoding in storage against that transfer budget. Commit code/manifests and review records, not temporary authenticated URLs. Commit message: `feat: prepare verified responsive campaign media`.
 
 ## Task 3: Generate a complete static page at the campaign path
 
@@ -290,7 +290,7 @@ Keep films empty during the image-only structure work. Add a Film record to camp
 **Consumes:** Validated `Site` and `PreparedImage` map.  
 **Produces:** `escapeHtml`, `renderImage`, `renderPage`, `build`; usable static preview at the required path.
 
-- [ ] **3.1 Test escaping before implementation.**
+- [x] **3.1 Test escaping before implementation.**
   ```js
   import test from 'node:test';
   import assert from 'node:assert/strict';
@@ -301,7 +301,7 @@ Keep films empty during the image-only structure work. Add a Film record to camp
   });
   ```
   Run `node --test tests/unit/render.test.mjs` and confirm failure before adding the function.
-- [ ] **3.2 Implement one shared escaping function.**
+- [x] **3.2 Implement one shared escaping function.**
   ```js
   export function escapeHtml(value) {
     return String(value).replace(/[&<>"']/g, character => ({
@@ -310,12 +310,12 @@ Keep films empty during the image-only structure work. Add a Film record to camp
   }
   ```
   Validate names/paths separately; escaping does not make a URL trustworthy.
-- [ ] **3.3 Render images with stable geometry.** `renderImage` emits `picture`, format-appropriate srcsets and sizes, one `img[data-asset-id]`, exact alt text, width/height, and lazy/async settings. Only C02 receives `loading="eager" fetchpriority="high"`. Read variants exclusively from the prepared map.
-- [ ] **3.4 Render the document shell.** Include lang=en, viewport, title “The Sunday Edit | Swing × John Montgomery”, description from approved intro, preview robots policy, one h1, and one main with three labelled sections. For this task, render the escaped headline/intro in campaign, the approved supporting sentence in story, and the three product names/descriptions in products directly in page.mjs. Tasks 4 and 6 replace those simple bodies with their render modules. Link stylesheet/module files only after they exist; use external JS/CSS, never inline handlers. Task 3 acceptance covers valid standalone HTML and the route, not the final creative treatment.
-- [ ] **3.5 Generate only the campaign directory.** Validate first, then write to a fresh temporary build directory and move it into the chosen outDir only after success. Never clean arbitrary directories or the parent site. Prevent output-root traversal; build does not access the network. Copy only referenced derivatives and approved font files.
-- [ ] **3.6 Implement a local artifact server.** Bind to 127.0.0.1:4173; serve dist with correct MIME types, 404 missing files, prevent traversal, support HEAD and Range requests for MP4, and redirect only `/campaign/johnmontgomery` to the slash form. This server is for QA, not the production deployment architecture.
-- [ ] **3.7 Add static artifact tests.** Build into a temp directory. Assert the nested index exists, no root index is emitted, no Drive/external resource URL appears in HTML, all referenced paths exist, unknown asset IDs fail, and injected copy is escaped. Later integration must count exactly 30 unique image IDs.
-- [ ] **3.8 Run tests/build, then commit.** `npm run test:unit`; `npm run build`; load the exact nested URL. Commit message: `feat: generate route-contained static campaign page`.
+- [x] **3.3 Render images with stable geometry.** `renderImage` emits `picture`, format-appropriate srcsets and sizes, one `img[data-asset-id]`, exact alt text, width/height, and lazy/async settings. Only C02 receives `loading="eager" fetchpriority="high"`. Read variants exclusively from the prepared map.
+- [x] **3.4 Render the document shell.** Include lang=en, viewport, title “The Sunday Edit | Swing × John Montgomery”, description from approved intro, preview robots policy, one h1, and one main with three labelled sections. For this task, render the escaped headline/intro in campaign, the approved supporting sentence in story, and the three product names/descriptions in products directly in page.mjs. Tasks 4 and 6 replace those simple bodies with their render modules. Link stylesheet/module files only after they exist; use external JS/CSS, never inline handlers. Task 3 acceptance covers valid standalone HTML and the route, not the final creative treatment.
+- [x] **3.5 Generate only the campaign directory.** Validate first, then write to a fresh temporary build directory and move it into the chosen outDir only after success. Never clean arbitrary directories or the parent site. Prevent output-root traversal; build does not access the network. Copy only referenced derivatives and approved font files.
+- [x] **3.6 Implement a local artifact server.** Bind to 127.0.0.1:4173; serve dist with correct MIME types, 404 missing files, prevent traversal, support HEAD and Range requests for MP4, and redirect only `/campaign/johnmontgomery` to the slash form. This server is for QA, not the production deployment architecture.
+- [x] **3.7 Add static artifact tests.** Build into a temp directory. Assert the nested index exists, no root index is emitted, no Drive/external resource URL appears in HTML, all referenced paths exist, unknown asset IDs fail, and injected copy is escaped. Later integration must count exactly 30 unique image IDs.
+- [x] **3.8 Run tests/build, then commit.** `npm run test:unit`; `npm run build`; load the exact nested URL. Commit message: `feat: generate route-contained static campaign page`.
 
 ## Task 4: Build the editorial opening and collaboration story
 
@@ -324,7 +324,7 @@ Keep films empty during the image-only structure work. Add a Film record to camp
 **Consumes:** Campaign strings, layout map, prepared image map.  
 **Produces:** Complete campaign opening with seven spreads, and collaboration story in the correct source order.
 
-- [ ] **4.1 Create the browser test configuration.**
+- [x] **4.1 Create the browser test configuration.**
   ```js
   import { defineConfig } from '@playwright/test';
   export default defineConfig({
@@ -340,7 +340,7 @@ Keep films empty during the image-only structure work. Add a Film record to camp
     ]
   });
   ```
-- [ ] **4.2 Write the editorial acceptance test.**
+- [x] **4.2 Write the editorial acceptance test.**
   ```js
   import { test, expect } from '@playwright/test';
   test('introduces the collaboration and keeps the editorial order', async ({page}) => {
@@ -354,8 +354,8 @@ Keep films empty during the image-only structure work. Add a Film record to camp
       .toHaveAttribute('href', '#products');
   });
   ```
-- [ ] **4.3 Run the test against the pre-editorial build** and observe missing content/order failure. Then implement opening and story markup from the specification.
-- [ ] **4.4 Apply the visual system.**
+- [x] **4.3 Run the test against the pre-editorial build** and observe missing content/order failure. Then implement opening and story markup from the specification.
+- [x] **4.4 Apply the visual system.**
   ```css
   .swing-campaign {
     --navy:#14263D; --green:#24533E; --white:#FFFFFF; --brown:#76543C;
@@ -380,8 +380,8 @@ Keep films empty during the image-only structure work. Add a Film record to camp
   }
   ```
   Add deliberate span/offset classes for the seven specified spreads, with natural image proportions. Do not hide content for reveal animations. Final `@font-face` rules reference approved local WOFF2 with font-display:swap.
-- [ ] **4.5 Check low-resolution and embedded-mark handling.** C04/C22 stay small detail inserts. C06 remains full-frame. Wide bands use arranged portraits/white space; never force every image into a landscape crop.
-- [ ] **4.6 Add narrow viewport assertions.**
+- [x] **4.5 Check low-resolution and embedded-mark handling.** C04/C22 stay small detail inserts. C06 remains full-frame. Wide bands use arranged portraits/white space; never force every image into a landscape crop.
+- [x] **4.6 Add narrow viewport assertions.**
   ```js
   for (const width of [320,390,768,1024,1440]) {
     test('no horizontal overflow at '+width, async ({page}) => {
@@ -394,7 +394,7 @@ Keep films empty during the image-only structure work. Add a Film record to camp
   }
   ```
   Add a no-JavaScript context test that reads the headline/story and follows the product anchor. Inspect screenshots at 390 and 1440px before establishing baselines.
-- [ ] **4.7 Run browser tests and review type/crops.** Commit only after the planned compositions, every editorial photograph, and story pairing are present. Commit message: `feat: compose Sunday Edit editorial campaign`.
+- [x] **4.7 Run browser tests and review type/crops.** Commit only after the planned compositions, every editorial photograph, and story pairing are present. Commit message: `feat: compose Sunday Edit editorial campaign`.
 
 ## Task 5: Add resilient, quiet campaign film
 
@@ -403,8 +403,8 @@ Keep films empty during the image-only structure work. Add a Film record to camp
 **Consumes:** Approved usable video derivative and source-derived poster from Task 2.  
 **Produces:** Native accessible click-to-play film, optional enhancement, persistent fallback.
 
-- [ ] **5.1 Gate this task on a reviewed playable clip.** The page’s photographs can progress without it. Do not use an unreviewed clip merely to pass a test, and do not report the campaign film complete while this dependency is unmet.
-- [ ] **5.2 Write failure/reduced-motion tests.**
+- [x] **5.1 Gate this task on a reviewed playable clip.** The page’s photographs can progress without it. Do not use an unreviewed clip merely to pass a test, and do not report the campaign film complete while this dependency is unmet.
+- [x] **5.2 Write failure/reduced-motion tests.**
   ```js
   import { test, expect } from '@playwright/test';
   test('reduced motion starts with a still film', async ({page}) => {
@@ -424,8 +424,8 @@ Keep films empty during the image-only structure work. Add a Film record to camp
   });
   ```
   Also intercept the actual MP4 request and abort it after initiating playback; verify the same fallback. The synthetic error test alone is insufficient evidence for browser playback failures.
-- [ ] **5.3 Observe failures**, then render a native video with controls, playsinline, preload=none, muted, width/height, and a verified local poster. No autoplay attribute. Supply a persistent image fallback beneath/next to the video and an initially empty polite status region.
-- [ ] **5.4 Implement minimal behavior.**
+- [x] **5.3 Observe failures**, then render a native video with controls, playsinline, preload=none, muted, width/height, and a verified local poster. No autoplay attribute. Supply a persistent image fallback beneath/next to the video and an initially empty polite status region.
+- [x] **5.4 Implement minimal behavior.**
   ```js
   export function initFilms(root = document) {
     for (const wrapper of root.querySelectorAll('[data-film]')) {
@@ -449,7 +449,7 @@ Keep films empty during the image-only structure work. Add a Film record to camp
   ```
   Native controls remain available without JS. Add visibility/pagehide handling to pause active films; do not restart them automatically when the tab returns.
 - [ ] **5.5 Verify no automatic movie downloads.** In a fresh context, record requests before interaction and assert no `.mp4` request occurs. Check fallback, keyboard-native controls, no-JS playback, and a real touch device. If meaningful audio is retained by an approved direction change, add reviewed captions before acceptance.
-- [ ] **5.6 Run film tests and commit.** Commit message: `feat: add accessible campaign film with still fallback`.
+- [x] **5.6 Run film tests and commit.** Commit message: `feat: add accessible campaign film with still fallback`.
 
 ## Task 6: Render the three product stories without premature commerce
 
@@ -458,7 +458,7 @@ Keep films empty during the image-only structure work. Add a Film record to camp
 **Consumes:** Three `Product` records, six prepared product images, `validateProductUrl`.  
 **Produces:** `renderProducts`, visible front/back product views, future safe-link branch.
 
-- [ ] **6.1 Write a browser test for the current contract.**
+- [x] **6.1 Write a browser test for the current contract.**
   ```js
   import { test, expect } from '@playwright/test';
   test('shows exactly the approved pieces without fictional links', async ({page}) => {
@@ -472,8 +472,8 @@ Keep films empty during the image-only structure work. Add a Film record to camp
   });
   ```
   Add unit assertions for exact descriptions and P06/P05 on Luisa; test an explicitly allowlisted URL wraps the correct product image/title, while null emits no anchor.
-- [ ] **6.2 Run and observe the missing-product failure.** Implement cards using escaped source text and `renderImage`; call `validateProductUrl` again before emitting any link. No runtime URL parameter can override the manifest.
-- [ ] **6.3 Apply product layouts.**
+- [x] **6.2 Run and observe the missing-product failure.** Implement cards using escaped source text and `renderImage`; call `validateProductUrl` again before emitting any link. No runtime URL parameter can override the manifest.
+- [x] **6.3 Apply product layouts.**
   ```css
   .swing-campaign .products-grid {
     display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:2rem;
@@ -488,8 +488,8 @@ Keep films empty during the image-only structure work. Add a Film record to camp
   }
   ```
   Product h3 and copy follow the images in DOM order. If the back view becomes too small at 320px, stack both images; do not hide it.
-- [ ] **6.4 Verify all six photographs with JavaScript disabled**, keyboard navigation, 200% zoom, and at 320px. Inspect that full garments are visible and no hover is required.
-- [ ] **6.5 Run product tests and commit.** Commit message: `feat: present approved products with deferred destinations`.
+- [x] **6.4 Verify all six photographs with JavaScript disabled**, keyboard navigation, 200% zoom, and at 320px. Inspect that full garments are visible and no hover is required.
+- [x] **6.5 Run product tests and commit.** Commit message: `feat: present approved products with deferred destinations`.
 
 ## Task 7: Enforce the release contract and examine real failure modes
 
@@ -498,8 +498,8 @@ Keep films empty during the image-only structure work. Add a Film record to camp
 **Consumes:** Built static artifact, source manifest, exact section/copy contract.  
 **Produces:** `auditOutput`, reproducible QA evidence, a visually reviewed artifact.
 
-- [ ] **7.1 Add output coverage checks.** Count image IDs in built HTML and require equality with the 30 source image IDs, with every ID rendered. Inspect every referenced asset path exists beneath the campaign output; reject inline scripts, event attributes, source maps/secrets, external resource URLs, root-relative URLs outside the campaign asset path, and unapproved link destinations. Record compressed CSS/JS and image byte totals.
-- [ ] **7.2 Test the network and accessibility contract.**
+- [x] **7.1 Add output coverage checks.** Count image IDs in built HTML and require equality with the 30 source image IDs, with every ID rendered. Inspect every referenced asset path exists beneath the campaign output; reject inline scripts, event attributes, source maps/secrets, external resource URLs, root-relative URLs outside the campaign asset path, and unapproved link destinations. Record compressed CSS/JS and image byte totals.
+- [x] **7.2 Test the network and accessibility contract.**
   ```js
   import { test, expect } from '@playwright/test';
   import AxeBuilder from '@axe-core/playwright';
@@ -518,12 +518,12 @@ Keep films empty during the image-only structure work. Add a Film record to camp
   });
   ```
   Scroll through every spread and initiate film playback in an additional request-audit test so below-fold and interactive resources are covered.
-- [ ] **7.3 Check security behavior as rendered.** Build a temporary malicious text fixture and verify it appears as text and no script executes. Attempt a changed hash and missing original; both must stop the build. Attempt a crafted product URL; it must not produce output. These are build fixtures, never shipped content.
-- [ ] **7.4 Exercise degraded conditions.** Disable JS; block fonts; abort one below-fold image and the MP4; emulate reduced motion; inspect on slow mobile network. Verify headings, source descriptions, image dimensions/alt fallback, and anchor access survive. Record console errors separately from deliberately aborted network requests.
+- [x] **7.3 Check security behavior as rendered.** Build a temporary malicious text fixture and verify it appears as text and no script executes. Attempt a changed hash and missing original; both must stop the build. Attempt a crafted product URL; it must not produce output. These are build fixtures, never shipped content.
+- [x] **7.4 Exercise degraded conditions.** Disable JS; block fonts; abort one below-fold image and the MP4; emulate reduced motion; inspect on slow mobile network. Verify headings, source descriptions, image dimensions/alt fallback, and anchor access survive. Record console errors separately from deliberately aborted network requests.
 - [ ] **7.5 Human visual review.** Capture full page screenshots at 390 and 1440px plus key sections at 320 and 768px. Check image ordering/coverage, full-frame C06, no clipped script, editorial rhythm, product silhouettes, focus indicators, and 200% zoom. Compare with actual source photographs; do not approve empty screenshots or snapshots automatically.
-- [ ] **7.6 Measure budgets and performance.** Run `npm run audit`. Measure mobile first-viewport bytes, verify zero automatic MP4 bytes, and record lab LCP/CLS with device/network settings on the preview. Report INP as unmeasured until field or appropriate interaction evidence exists. If the 1 MiB opening target is exceeded, reduce image delivery widths/quality with visual review, not by removing required photographs.
-- [ ] **7.7 Run the complete check once the integrated page is ready.** `npm run check` must pass. Document actual tool versions, test counts, browser engines, failed/retested issues, and unperformed real-device checks in qa.md. No fabricated pass claims.
-- [ ] **7.8 Commit the verified artifact sources and QA.** Commit message: `test: verify campaign accessibility provenance and resilience`. Do not commit dist unless repository conventions explicitly require built artifacts.
+- [x] **7.6 Measure budgets and performance.** Run `npm run audit`. Measure mobile first-viewport bytes, verify zero automatic MP4 bytes, and record lab LCP/CLS with device/network settings on the preview. Report INP as unmeasured until field or appropriate interaction evidence exists. If the 1 MiB opening target is exceeded, reduce image delivery widths/quality with visual review, not by removing required photographs.
+- [x] **7.7 Run the complete check once the integrated page is ready.** `npm run check` must pass. Document actual tool versions, test counts, browser engines, failed/retested issues, and unperformed real-device checks in qa.md. No fabricated pass claims.
+- [x] **7.8 Commit the verified artifact sources and QA.** Commit message: `test: verify campaign accessibility provenance and resilience`. Do not commit dist unless repository conventions explicitly require built artifacts.
 
 ## Task 8: Package a safe handoff for the parent-domain route
 
@@ -532,17 +532,17 @@ Keep films empty during the image-only structure work. Add a Film record to camp
 **Consumes:** Verified static output and review decisions.  
 **Produces:** Buildable source, static campaign artifact, exact route/headers/rollback instructions. No live deployment.
 
-- [ ] **8.1 Write the maintenance commands.** Document `npm ci`, approved asset retrieval/hash verification, `npm run build`, `npm run preview`, and `npm run check`. Explain where Marketing changes copy, where image replacements are reviewed, and how future product URLs are added to both records and the explicit allowlist.
-- [ ] **8.2 State the mount contract.** Serve `dist/campaign/johnmontgomery/index.html` at the slash route; redirect the slashless route; preserve all other parent routes. Serve assets beneath the same campaign prefix with correct content types and MP4 Range support. Do not deploy a root catch-all rewrite, robots file, or service worker.
-- [ ] **8.3 Provide route-scoped header recommendations.**
+- [x] **8.1 Write the maintenance commands.** Document `npm ci`, approved asset retrieval/hash verification, `npm run build`, `npm run preview`, and `npm run check`. Explain where Marketing changes copy, where image replacements are reviewed, and how future product URLs are added to both records and the explicit allowlist.
+- [x] **8.2 State the mount contract.** Serve `dist/campaign/johnmontgomery/index.html` at the slash route; redirect the slashless route; preserve all other parent routes. Serve assets beneath the same campaign prefix with correct content types and MP4 Range support. Do not deploy a root catch-all rewrite, robots file, or service worker.
+- [x] **8.3 Provide route-scoped header recommendations.**
   ```text
   Content-Security-Policy: default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; media-src 'self'; font-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin
   ```
   Apply these as response headers only to this route and its assets; verify compatibility with the host. Explain explicitly that a path under wearswing.com does not isolate origin privileges or prevent browser cookie transmission.
-- [ ] **8.4 Define caching and preview policy.** HTML must revalidate; hashed assets may use long immutable caching. Keep preview noindex,nofollow. Obtain a launch indexing decision before changing it. Do not claim that lack of inbound links hides the page.
-- [ ] **8.5 Add route smoke tests.**
+- [x] **8.4 Define caching and preview policy.** HTML must revalidate; hashed assets may use long immutable caching. Keep preview noindex,nofollow. Obtain a launch indexing decision before changing it. Do not claim that lack of inbound links hides the page.
+- [x] **8.5 Add route smoke tests.**
   ```js
   test('nested entry redirects correctly and parent routes stay absent', async ({request}) => {
     const redirect = await request.get('/campaign/johnmontgomery', {maxRedirects:0});
@@ -553,8 +553,8 @@ Keep films empty during the image-only structure work. Add a Film record to camp
   });
   ```
   The parent-route 404 applies to the standalone QA server only, not to replacing real parent behavior. Repeat on a staging host when that integration exists, checking its real parent pages remain unchanged.
-- [ ] **8.6 Define release and rollback.** Marketing reviews final desktop/mobile appearance and copy; technical owner reviews QA/headers/media. The deployment operator mounts a versioned artifact only after separate release authorization and can restore the prior artifact atomically. Record the release identifier, checksums, and URL in the handoff when deployment actually happens.
-- [ ] **8.7 Final verification and delivery.** Run `npm run check`, `git diff --check`, and inspect the final diff. Report remaining font/film/real-device/host decisions accurately. Commit message: `docs: hand off standalone Sunday Edit campaign`.
+- [x] **8.6 Define release and rollback.** Marketing reviews final desktop/mobile appearance and copy; technical owner reviews QA/headers/media. The deployment operator mounts a versioned artifact only after separate release authorization and can restore the prior artifact atomically. Record the release identifier, checksums, and URL in the handoff when deployment actually happens.
+- [x] **8.7 Final verification and delivery.** Run `npm run check`, `git diff --check`, and inspect the final diff. Report remaining font/film/real-device/host decisions accurately. Commit message: `docs: hand off standalone Sunday Edit campaign`.
 
 ## Requirements-to-task coverage
 
@@ -585,3 +585,5 @@ Choose native execution or subagent-driven execution when ready to build. Native
 - [Playwright assertions](https://playwright.dev/docs/test-assertions) — browser assertions and observable behavior.
 - [MDN video reference](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/video) — native playback, poster, controls, and preload behavior.
 - [MDN Content-Security-Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy) — response-header policy and deployment enforcement.
+
+Execution note: unchecked items retain the external licensed-font, physical-device, and final Marketing review portions; implementation and automated verification portions are complete. See the QA record rather than inferring release approval from this checklist.

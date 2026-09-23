@@ -4,7 +4,7 @@ Verified 2026-09-23 in the isolated `codex/sunday-edit` worktree. These are loca
 
 ## Automated evidence
 
-`npm run check`: 9 unit tests and 54 browser tests passed before the handoff-specific route cases were added. Chromium, Firefox, and WebKit each exercise the complete editorial journey, five widths (320, 390, 768, 1024, 1440), no-JavaScript content, all product views, native film, reduced motion, failed media, keyboard navigation, and doubled text sizing.
+`npm run check`: 9 unit tests and 54 browser tests passed in the full run; three additional handoff route/header cases passed separately. The final full run includes all 57 browser cases. Chromium, Firefox, and WebKit each exercise the complete editorial journey, five widths (320, 390, 768, 1024, 1440), no-JavaScript content, all product views, native film, reduced motion, failed media, keyboard navigation, and doubled text sizing.
 
 The release test scrolls to and decodes every campaign/product image, then plays the film and checks page errors and external requests. Axe WCAG 2.0/2.1/2.2 AA scans return no violations in all three engines. This is automated evidence, not a substitute for human accessibility review.
 

@@ -26,3 +26,8 @@ test('initial and complete image transfer stay within the agreed budgets',async(
  for(const image of await page.locator('img[data-asset-id]').all()){await image.scrollIntoViewIfNeeded();await expect.poll(()=>image.evaluate(i=>i.complete)).toBe(true);}
  await page.waitForLoadState('networkidle');expect(bytes.reduce((a,b)=>a+b,0)).toBeLessThanOrEqual(8*1024*1024);expect(movies).toEqual([]);
 });
+test('campaign entry redirects, exposes scoped headers, and leaves other routes absent',async({request})=>{
+ const redirect=await request.get('/campaign/johnmontgomery',{maxRedirects:0});expect(redirect.status()).toBe(308);expect(redirect.headers().location).toBe('/campaign/johnmontgomery/');
+ const page=await request.get('/campaign/johnmontgomery/');expect(page.status()).toBe(200);expect(page.headers()['content-security-policy']).toContain("connect-src 'none'");expect(page.headers()['cache-control']).toBe('no-cache');
+ expect((await request.get('/products/not-built')).status()).toBe(404);expect((await request.get('/campaign/johnmontgomery/.swing-generated')).status()).toBe(404);
+});

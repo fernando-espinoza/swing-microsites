@@ -1,7 +1,7 @@
 # The Sunday Edit — proposed design and delivery specification
 
 Date: 2026-09-23  
-Status: Proposed for review; planning only. No website code or deployment is authorized by this document itself.
+Status: Design and plan approved for implementation by the user on 2026-09-23. Implementation is in the isolated worktree; deployment remains out of scope.
 
 ## Intent and success
 
