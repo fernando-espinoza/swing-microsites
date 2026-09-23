@@ -10,7 +10,7 @@ The release test scrolls to and decodes every campaign/product image, then plays
 
 Policy tests reject changed source bytes, missing files, traversal, escaping source symlinks, unknown/omitted IDs, changed product descriptions, and unapproved destinations. Output auditing parses actual HTML, rejects active inline content/external resources, and verifies hashed output bytes. No signed Drive URLs are checked in or shipped.
 
-Output audit: 30 distinct source photographs and six supplied films. Gzipped JS: 706 bytes. Gzipped CSS: 3,735 bytes. Alternative image files total 23,073,851 bytes in storage; a visitor fetches only selected responsive candidates. All three browsers pass the 1 MiB initial-media and 8 MiB complete-visit image-transfer budgets, with reduced motion enabled for image-only measurement. Normal playback requests films as they enter view.
+Output audit: 30 distinct source photographs and six supplied films. Gzipped JS: 706 bytes. Gzipped CSS: 3,954 bytes. Alternative image files total 23,073,851 bytes in storage; a visitor fetches only selected responsive candidates. All three browsers pass the 1 MiB initial-media and 8 MiB complete-visit image-transfer budgets, with reduced motion enabled for image-only measurement. Normal playback requests films as they enter view.
 
 ## Performance sample (initial single-film build)
 
@@ -55,3 +55,5 @@ All six clips automatically play muted and loop when visible in Chromium, Firefo
 One Sunday Edit heading now separates two mixed-media collages, each containing three videos. A regression test verifies the exact six-part reading order and absence of repeated film-copy panels. All 10 unit and 72 browser checks pass; mobile and desktop collage compositions were inspected.
 
 Caption and spacing refinement: zero figcaptions remain, while image alt text and product names stay intact. Desktop and mobile collages were inspected with varied column proportions, compact row spacing and uninterrupted white backgrounds. The full suite remains green (10 unit, 72 browser cases).
+
+Scrapbook overlaps verified visually on desktop and mobile; all 10 unit and 72 browser tests pass. Overlaps are limited to selected photographs, with white borders and separate mobile offsets.

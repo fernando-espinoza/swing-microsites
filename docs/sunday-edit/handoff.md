@@ -96,3 +96,5 @@ Every clip retains its full supplied visual frame, including embedded overlays/b
 The video motion update supersedes the original click-to-play-only design. Initial film downloads remain deferred until the first visible clip; scrolling through the whole page now intentionally downloads the six movies. Image-only budget tests run with reduced motion so that image and movie traffic remain distinguishable.
 
 Collage refinement: image and film captions (including front/back labels) are removed; descriptive alt text and product names remain. Row spacing is tighter, with a continuous white backdrop and distinct image/video proportions for each row. Positions are art-directed, not randomized per visit.
+
+Scrapbook treatment: selected photographs overlap adjacent photos with white mounted borders. Desktop and mobile use separate placements, leaving film frames and controls unobstructed.
