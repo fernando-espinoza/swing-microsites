@@ -22,11 +22,11 @@ The output contains campaign routes only. It is not a parent-site deployment. A 
 
 ## Private media bootstrap
 
-The source store must be private because originals and licensing-sensitive source material do not belong in this public repository. The user must choose/authorize the store before bootstrap. For the proposed private GitHub media repository:
+The source store must be private because originals and licensing-sensitive source material do not belong in this public repository. The approved source store is `fernando-espinoza/swing-microsites-media` (private). It is pinned in `deployment/media-lock.json`. To maintain it:
 
 1. Store approved originals and derivatives under `assets-source/<campaign>/`, excluding prepared caches and unrelated files.
 2. Commit and push the media, and record the full immutable commit SHA in `deployment/media-lock.json` with the repository owner/name.
-3. Create a repository-scoped **read-only** SSH deploy key. Store the private half as `SOURCE_MEDIA_SSH_KEY` in GitHub Actions and in the Vercel project for Preview and Production only; do not put it in Git, logs, PR text, or this document.
+3. Create a repository-scoped **read-only** SSH deploy key. Store the private half as `SOURCE_MEDIA_SSH_KEY` in GitHub Actions and as `SOURCE_MEDIA_SSH_KEY_BASE64` (base64-encoded key) in the Vercel project for Preview and Production only; do not put it in Git, logs, PR text, or this document.
 4. `deployment/github-known-hosts` pins GitHub's public SSH host keys. Review official GitHub key changes rather than disabling host checking.
 5. Restore in a clean checkout, run all checks, then verify the Vercel preview for the exact PR head. A missing key/lock or a changed asset hash fails the build.
 
@@ -48,4 +48,4 @@ Retain the previous successful production deployment and commit. If a release fa
 
 ## Initial setup status
 
-The skill is installed and validated; deployment files are prepared and static packaging passes. The private media store/key, branch protection, fresh-checkout CI, and first successful PR preview must be verified before this workflow can be described as live. Production deployment is deliberately not part of bootstrap. Automatic approval review rejected enabling branch protection before the required CI workflow exists remotely; main protection is unchanged and requires approval after CI is available.
+The skill is installed and validated. The private media repository and read-only deploy key exist. GitHub Actions has the raw key secret; Vercel has the base64 Secret for both Preview and Production. Media restoration and static packaging pass locally. The first PR/CI/preview and main protection are being verified before the workflow is declared live. The user explicitly approved main protection after CI becomes available. Production deployment is deliberately not part of bootstrap.
