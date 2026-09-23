@@ -26,7 +26,7 @@ export function validateMarkup(html,site){
    if(node.tagName==='h1')headings.push(text(node).replace(/\s+/g,' ').trim());
    if(node.tagName==='section'&&node.parentNode?.tagName==='main')sections.push(a.id);
    if(node.tagName==='video'){
-    films++;if(!('controls'in a)||!('muted'in a)||!('playsinline'in a)||('autoplay'in a)||a.preload!=='none'||!a.poster)throw Error('Unsafe film behavior');
+    films++;if(!('controls'in a)||!('muted'in a)||!('playsinline'in a)||!('loop'in a)||!('data-autoplay'in a)||('autoplay'in a)||a.preload!=='none'||!a.poster)throw Error('Unsafe film behavior');
    }
   }
   for(const child of node.childNodes??[])walk(child);

@@ -77,6 +77,8 @@ All 24 campaign images are assigned once: two cover images, 21 spread images, on
 
 ## Implementation review, 2026-09-23
 
-Software decoding with FFmpeg 7.1 succeeded for all six HEVC clips. Sampled frames from every clip were inspected; V01 was reviewed throughout its 10.95 seconds using half-second frames. Selected V01: woman in green beside/in a golf cart, consistent framing, no visible player interface or unrelated insert. V02/V05 have visible interface corners; V04 has embedded headline; V03/V05 include other explicit branding; V06 is a coastal golf sequence. Only V01 is used.
+Software decoding with FFmpeg 7.1 succeeded for all six HEVC clips. Sampled frames from every clip were inspected; V01 was reviewed throughout its 10.95 seconds using half-second frames. Selected V01: woman in green beside/in a golf cart, consistent framing, no visible player interface or unrelated insert. V02/V05 have visible interface corners; V04 has embedded headline; V03/V05 include other explicit branding; V06 is a coastal golf sequence. The initial build used only V01. The user subsequently approved all six supplied clips, including embedded branding and overlays; all six are now used.
 
 V01 is encoded H.264/yuv420p at 720×1564, 30fps, CRF23, fast-start, without audio. Its poster is from 0.5 seconds of the original. Original and derivative SHA-256 values are recorded; the silent scene has no dialogue or instructional information requiring a speech transcript. Browser playback is checked separately in QA. No content was generated or substituted.
+
+All six originals are checksum-verified. V02–V06 use full-duration silent H.264 derivatives at 720px width, proportional even height, 30fps, CRF23, yuv420p and fast-start. Posters are taken at 0.5 seconds; hashes are recorded in campaign.json.

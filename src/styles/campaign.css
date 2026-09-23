@@ -93,3 +93,14 @@
 @media(max-width:350px){.swing-campaign .product-views{grid-template-columns:1fr;gap:22px}.swing-campaign .product-back{width:70%;justify-self:end}.swing-campaign .edition-signature{flex-basis:100%;margin-top:8px}.swing-campaign .film-title{font-size:68px}}
 
 .swing-campaign .film-copy,.swing-campaign .partner-name{min-width:0;overflow-wrap:anywhere}
+
+/* Alternating motion interludes keep the six films within the editorial rhythm. */
+.swing-campaign .film-band-3,.swing-campaign .film-band-5{background:var(--green)}
+.swing-campaign .film-band-2,.swing-campaign .film-band-4,.swing-campaign .film-band-6{background:#f5f6f3;color:var(--navy)}
+.swing-campaign .film-band-2 .film-frame,.swing-campaign .film-band-4 .film-frame,.swing-campaign .film-band-6 .film-frame{grid-column:1;grid-row:1}
+.swing-campaign .film-band-2 .film-inner,.swing-campaign .film-band-4 .film-inner,.swing-campaign .film-band-6 .film-inner{grid-template-columns:330px minmax(0,1fr)}
+.swing-campaign .film-band-2 .film-copy,.swing-campaign .film-band-4 .film-copy,.swing-campaign .film-band-6 .film-copy{grid-column:2}
+@media(max-width:767px){
+.swing-campaign .film-band .film-inner{grid-template-columns:minmax(0,1fr)}
+.swing-campaign .film-band .film-copy,.swing-campaign .film-band .film-frame{grid-column:1;grid-row:auto}
+}

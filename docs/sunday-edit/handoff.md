@@ -25,8 +25,8 @@ Preview: `http://127.0.0.1:4173/campaign/johnmontgomery/`. `npm run preview` bin
 Original media stays out of Git and the public artifact. Existing files are staged in `assets-source/sunday-edit/`. For a fresh checkout:
 
 1. Open the ordinary authenticated Drive URLs in [the source inventory](../superpowers/reference/2026-09-23-asset-inventory.json), or use an authorized Drive connector. Never save a short-lived signed download URL in source control.
-2. Save each used original under its `sourcePath` in `content/sunday-edit/assets.json`. This is C01.jpg through C24.jpg, P01.webp through P06.webp, and V01.mp4. Use the manifest's Drive ID, not a filename search, to avoid mismatches.
-3. Preserve the approved V01 derivatives from `assets-source/sunday-edit/film/` in the private handoff bundle, or regenerate them with FFmpeg 7.1 using the exact commands below.
+2. Save each used original under its `sourcePath` in `content/sunday-edit/assets.json`. This is C01.jpg through C24.jpg, P01.webp through P06.webp, and V01.mp4 through V06.mp4. Use the manifest's Drive ID, not a filename search, to avoid mismatches.
+3. Preserve the approved V01–V06 derivatives from `assets-source/sunday-edit/film/` in the private handoff bundle, or regenerate them with FFmpeg 7.1 using the exact commands below.
 4. Run `npm run build`. It verifies original source hashes before generating responsive image variants. A changed or missing original stops the build with its asset ID. Image variants are generated each build from the originals; the optional `npm run media` produces a review set in ignored source storage.
 
 The film uses all of V01 (10.946667 seconds), without audio. Its source is 964×2094 HEVC; its web derivative is 720×1564 H.264, 30fps, yuv420p, CRF 23. Use the local FFmpeg binary as `ffmpeg`:
@@ -85,3 +85,12 @@ The page currently declares `noindex,nofollow`; an orphaned route is not inheren
 5. Record artifact checksum, release commit, and deployed URL. If verification fails, restore the previous campaign directory atomically; do not revert or replace the entire parent site.
 
 An ignored local `artifacts/` directory may contain the packaged public page. The private source-media bundle is distinct and must never be uploaded as public web content.
+
+
+## Approved motion update
+
+All six supplied videos appear between the photographic spreads. JavaScript starts muted looping playback only when at least 25% of the frame is visible. Offscreen films and hidden-tab playback pause. A manual pause remains respected. Reduced-motion users and no-JavaScript users retain native click-to-play controls; autoplay denial leaves the poster and controls usable.
+
+Every clip retains its full supplied visual frame, including embedded overlays/branding, as explicitly approved. Sound is removed. Use the private source bundle to reproduce exact derivative hashes. For V02–V06 the encoder settings above use scale=720:-2, preset fast, and full duration; poster frames are taken at 0.5 seconds. The campaign manifest contains dimensions and source/derivative checksums.
+
+The video motion update supersedes the original click-to-play-only design. Initial film downloads remain deferred until the first visible clip; scrolling through the whole page now intentionally downloads the six movies. Image-only budget tests run with reduced motion so that image and movie traffic remain distinguishable.

@@ -20,6 +20,71 @@
       "srcSha256": "005a673e726c6fb0d6e92126dce200a3954285f14f30d97b8e8dce2efa5237a7",
       "posterSrc": "assets/V01-poster-8819662c222e.jpg",
       "posterSrcSha256": "8819662c222e5860cc88708cba52337ff89113d4f1ad0ef13189bb793972872b"
+    },
+    {
+      "sourceAssetId": "V02",
+      "width": 720,
+      "height": 1564,
+      "posterAlt": "Still from the supplied Sunday Edit campaign film V02.",
+      "sourceStartSeconds": 0,
+      "sourceEndSeconds": 10.54,
+      "captionSrc": null,
+      "src": "assets/V02-film-15b54af0f6ba.mp4",
+      "srcSha256": "15b54af0f6ba9e48241b8d060370a9d1a54bb5299d6c445a4aa9da42cb4f7dbf",
+      "posterSrc": "assets/V02-poster-f0efebf93ec0.jpg",
+      "posterSrcSha256": "f0efebf93ec0f9d0e7367a6706b7a1518d06687798b368450f33ef6e76bdbc2a"
+    },
+    {
+      "sourceAssetId": "V03",
+      "width": 720,
+      "height": 1566,
+      "posterAlt": "Still from the supplied Sunday Edit campaign film V03.",
+      "sourceStartSeconds": 0,
+      "sourceEndSeconds": 6.84,
+      "captionSrc": null,
+      "src": "assets/V03-film-01d58909d79a.mp4",
+      "srcSha256": "01d58909d79af6c7e0e5f7bd73b86bcaa80627962244446af339681eba63abd1",
+      "posterSrc": "assets/V03-poster-2178d59d990f.jpg",
+      "posterSrcSha256": "2178d59d990fdb86f598ca4fbad946cb1b9b567b8553f5e644726e91847e9909"
+    },
+    {
+      "sourceAssetId": "V04",
+      "width": 720,
+      "height": 1564,
+      "posterAlt": "Still from the supplied Sunday Edit campaign film V04.",
+      "sourceStartSeconds": 0,
+      "sourceEndSeconds": 9.45,
+      "captionSrc": null,
+      "src": "assets/V04-film-81f24610c3ee.mp4",
+      "srcSha256": "81f24610c3ee29cf607605b09b5504392d774eac483e5536c2c797a0ecc6ddb6",
+      "posterSrc": "assets/V04-poster-da902d8a17f3.jpg",
+      "posterSrcSha256": "da902d8a17f36691ce3e5461dac6c18e6e4c19a1b08e587b6c04102639a9731a"
+    },
+    {
+      "sourceAssetId": "V05",
+      "width": 720,
+      "height": 1566,
+      "posterAlt": "Still from the supplied Sunday Edit campaign film V05.",
+      "sourceStartSeconds": 0,
+      "sourceEndSeconds": 6.46,
+      "captionSrc": null,
+      "src": "assets/V05-film-eb9cd3551d2a.mp4",
+      "srcSha256": "eb9cd3551d2aa86426cdc1fcfc2abc2afc0281fba1dec56670ce6c10145d3efd",
+      "posterSrc": "assets/V05-poster-070203dc25bb.jpg",
+      "posterSrcSha256": "070203dc25bb684367477611a71661cf1f980ea1af9a5a91c2f62c867859ef4f"
+    },
+    {
+      "sourceAssetId": "V06",
+      "width": 720,
+      "height": 1564,
+      "posterAlt": "Still from the supplied Sunday Edit campaign film V06.",
+      "sourceStartSeconds": 0,
+      "sourceEndSeconds": 16.14,
+      "captionSrc": null,
+      "src": "assets/V06-film-f2e9cada0047.mp4",
+      "srcSha256": "f2e9cada004789540857f2ee946fc6820cd2f99c5d3d6faa4e6a71acf3bb3002",
+      "posterSrc": "assets/V06-poster-aa179a253e6c.jpg",
+      "posterSrcSha256": "aa179a253e6ce9fdaf5d5cdaa0ae09453322382792206bae53f67efde301b9a0"
     }
   ]
 }

@@ -4,7 +4,7 @@ test('full editorial journey is accessible and makes no external resource reques
  const foreign=[];const errors=[];page.on('request',r=>{if(new URL(r.url()).origin!=='http://127.0.0.1:4173')foreign.push(r.url());});page.on('pageerror',e=>errors.push(e.message));
  await page.goto('/campaign/johnmontgomery/');
  for(const image of await page.locator('img[data-asset-id]').all()){await image.scrollIntoViewIfNeeded();await expect.poll(()=>image.evaluate(i=>i.complete&&i.naturalWidth>0)).toBe(true);}
- const video=page.locator('video');await video.scrollIntoViewIfNeeded();await video.evaluate(v=>v.play());await expect.poll(()=>video.evaluate(v=>v.currentTime)).toBeGreaterThan(.1);await video.evaluate(v=>v.pause());
+ const video=page.locator('video').first();await video.scrollIntoViewIfNeeded();await video.evaluate(v=>v.play());await expect.poll(()=>video.evaluate(v=>v.currentTime)).toBeGreaterThan(.1);await video.evaluate(v=>v.pause());
  const results=await new AxeBuilder({page}).withTags(['wcag2a','wcag2aa','wcag21aa','wcag22aa']).analyze();
  expect(results.violations).toEqual([]);expect(foreign).toEqual([]);expect(errors).toEqual([]);
 });
@@ -21,7 +21,7 @@ for(const width of [320,390,640])test('200 percent text and unavailable webfonts
  expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);await expect(page.locator('h1')).toBeVisible();await expect(page.locator('#products h3')).toHaveCount(3);
 });
 test('initial and complete image transfer stay within the agreed budgets',async({page})=>{
- const bytes=[];const movies=[];page.on('response',r=>{const type=r.request().resourceType();if(['image','media'].includes(type))bytes.push(Number(r.headers()['content-length']||0));});page.on('request',r=>{if(r.url().endsWith('.mp4'))movies.push(r.url());});
+ await page.emulateMedia({reducedMotion:'reduce'});const bytes=[];const movies=[];page.on('response',r=>{const type=r.request().resourceType();if(['image','media'].includes(type))bytes.push(Number(r.headers()['content-length']||0));});page.on('request',r=>{if(r.url().endsWith('.mp4'))movies.push(r.url());});
  await page.setViewportSize({width:390,height:844});await page.goto('/campaign/johnmontgomery/');await page.waitForLoadState('networkidle');expect(bytes.reduce((a,b)=>a+b,0)).toBeLessThanOrEqual(1024*1024);expect(movies).toEqual([]);
  for(const image of await page.locator('img[data-asset-id]').all()){await image.scrollIntoViewIfNeeded();await expect.poll(()=>image.evaluate(i=>i.complete)).toBe(true);}
  await page.waitForLoadState('networkidle');expect(bytes.reduce((a,b)=>a+b,0)).toBeLessThanOrEqual(8*1024*1024);expect(movies).toEqual([]);

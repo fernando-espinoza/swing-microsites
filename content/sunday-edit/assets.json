@@ -370,5 +370,65 @@
     "height": 2094,
     "alt": "A woman in a green polo sitting in a golf cart.",
     "approved": true
+  },
+  {
+    "id": "V02",
+    "driveId": "1-UALJ7AJh4Lfg-curAE3q6qQeSg4GaWu",
+    "sourceFilename": "ScreenRecording_09-23-2026 15-41-27_1.mp4",
+    "sourceSha256": "040e761e1b53aca3b78bad73dc7c4a4e9a6b9630c7889a0067c9cda60575c798",
+    "kind": "video",
+    "sourcePath": "V02.mp4",
+    "width": 990,
+    "height": 2150,
+    "alt": "Supplied Sunday Edit campaign footage V02.",
+    "approved": true
+  },
+  {
+    "id": "V03",
+    "driveId": "1ss5g-7R0dL2AJQz7G1x5ZjeQvqxeYH86",
+    "sourceFilename": "ScreenRecording_09-23-2026 15-42-06_1.mp4",
+    "sourceSha256": "aa891c9103a77cf06f07dad903f69496447a4cf27ceaef746de5293daed2e6cd",
+    "kind": "video",
+    "sourcePath": "V03.mp4",
+    "width": 954,
+    "height": 2074,
+    "alt": "Supplied Sunday Edit campaign footage V03.",
+    "approved": true
+  },
+  {
+    "id": "V04",
+    "driveId": "1rclSiPw3Dx3CI93D6TSGcDsOjHBvo9E7",
+    "sourceFilename": "ScreenRecording_09-23-2026 15-40-13_1.mp4",
+    "sourceSha256": "230e53db1554cf6b25cd4fc69937593c88b1c8853d578c4201084dcc700838ff",
+    "kind": "video",
+    "sourcePath": "V04.mp4",
+    "width": 980,
+    "height": 2130,
+    "alt": "Supplied Sunday Edit campaign footage V04.",
+    "approved": true
+  },
+  {
+    "id": "V05",
+    "driveId": "1--vVj2BwTHWnGQVxzq_mvPVJX104KxPT",
+    "sourceFilename": "ScreenRecording_09-23-2026 15-40-40_1.mp4",
+    "sourceSha256": "713147c9883223d58b63ec13258796484981637f456e9c467db587fd81d4bb73",
+    "kind": "video",
+    "sourcePath": "V05.mp4",
+    "width": 1032,
+    "height": 2244,
+    "alt": "Supplied Sunday Edit campaign footage V05.",
+    "approved": true
+  },
+  {
+    "id": "V06",
+    "driveId": "1uS9BrMV_Vv-JdkhjDVTiTDrzTtiilz0k",
+    "sourceFilename": "ScreenRecording_09-23-2026 15-43-57_1.mp4",
+    "sourceSha256": "2723f379f6eb957460da376bf834f9a9e667ba067a58432a7d5a0b3c1b2d7e84",
+    "kind": "video",
+    "sourcePath": "V06.mp4",
+    "width": 998,
+    "height": 2168,
+    "alt": "Supplied Sunday Edit campaign footage V06.",
+    "approved": true
   }
 ]
