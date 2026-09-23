@@ -94,3 +94,5 @@ All six supplied videos appear inside two mixed-media collages (three videos in 
 Every clip retains its full supplied visual frame, including embedded overlays/branding, as explicitly approved. Sound is removed. Use the private source bundle to reproduce exact derivative hashes. For V02–V06 the encoder settings above use scale=720:-2, preset fast, and full duration; poster frames are taken at 0.5 seconds. The campaign manifest contains dimensions and source/derivative checksums.
 
 The video motion update supersedes the original click-to-play-only design. Initial film downloads remain deferred until the first visible clip; scrolling through the whole page now intentionally downloads the six movies. Image-only budget tests run with reduced motion so that image and movie traffic remain distinguishable.
+
+Collage refinement: image and film captions (including front/back labels) are removed; descriptive alt text and product names remain. Row spacing is tighter, with a continuous white backdrop and distinct image/video proportions for each row. Positions are art-directed, not randomized per visit.
