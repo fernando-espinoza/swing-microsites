@@ -1,0 +1,9 @@
+[
+  {
+    "id": "sunday-edit",
+    "route": "/campaign/johnmontgomery/",
+    "sourceDirectory": "assets-source/sunday-edit",
+    "buildModule": "scripts/build.mjs",
+    "auditModule": "scripts/audit-output.mjs"
+  }
+]

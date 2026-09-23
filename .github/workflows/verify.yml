@@ -1,0 +1,32 @@
+name: Microsite verification
+on:
+  pull_request:
+    branches: [main]
+    types: [opened, synchronize, reopened, ready_for_review]
+permissions:
+  contents: read
+concurrency:
+  group: microsite-verify-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+jobs:
+  verify:
+    name: Build and verify microsites
+    if: github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      - run: npm ci
+      - name: Restore pinned approved media
+        run: npm run media:restore
+        env:
+          SOURCE_MEDIA_SSH_KEY: ${{ secrets.SOURCE_MEDIA_SSH_KEY }}
+      - run: npx playwright install --with-deps chromium firefox webkit
+      - run: npm run check
+      - run: node scripts/deployment/build.mjs

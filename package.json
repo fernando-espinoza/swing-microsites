@@ -14,7 +14,9 @@
     "preview": "node scripts/serve.mjs",
     "test:e2e": "playwright test",
     "audit": "node scripts/audit-output.mjs",
-    "check": "npm run test:unit && npm run build && npm run audit && npm run test:e2e"
+    "check": "npm run test:unit && npm run build && npm run audit && npm run test:e2e",
+    "media:restore": "node scripts/deployment/restore-media.mjs",
+    "build:deployment": "npm run media:restore && node scripts/deployment/build.mjs"
   },
   "devDependencies": {
     "@axe-core/playwright": "4.13.0",
