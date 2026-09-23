@@ -72,30 +72,6 @@
     "approved": true
   },
   {
-    "id": "C07",
-    "driveId": "1Ff8jAPGKNNsvnN23JvZTtis54gjFHeR4",
-    "sourceFilename": "ee1b3d6ad62489155cbbac81a62f6b23.jpg",
-    "sourceSha256": "6734c605d016ac2b5b355bffd2e4d1ade3172643d88ab7069e2c8d7e9cf326ed",
-    "kind": "image",
-    "sourcePath": "C07.jpg",
-    "width": 861,
-    "height": 1166,
-    "alt": "Two dogs in directors’ chairs beside a golf cart.",
-    "approved": true
-  },
-  {
-    "id": "C08",
-    "driveId": "1Bth7cAbcser4w36KU4G0nhRMMUmrPkNO",
-    "sourceFilename": "0cdbe42613c0dc79ce642d72e3bfb4fc.jpg",
-    "sourceSha256": "241ffdb10f254ae6e4eedbfff6b84314d5c79f0fc4133339aedf557f8c59a0f4",
-    "kind": "image",
-    "sourcePath": "C08.jpg",
-    "width": 736,
-    "height": 920,
-    "alt": "A tailored check outfit and golf bag outside the clubhouse.",
-    "approved": true
-  },
-  {
     "id": "C09",
     "driveId": "1z9KQioD5AlhefO4Yv4k8RdG6UH2EJ5lb",
     "sourceFilename": "9ec6dd33a4e8c328888f91fe033ef5f1.jpg",
@@ -129,18 +105,6 @@
     "width": 1125,
     "height": 1384,
     "alt": "A woman seated at the wheel of a golf cart.",
-    "approved": true
-  },
-  {
-    "id": "C12",
-    "driveId": "1tO65f66F8lGnjh8J9SL-P4h_yYlLL1_m",
-    "sourceFilename": "43694a995da85a6c308ee348dbaf9fc9.jpg",
-    "sourceSha256": "9518d7e4617784a8c788564f706f41b4eb78ba48a81c6ad1731a8307a32f9f7b",
-    "kind": "image",
-    "sourcePath": "C12.jpg",
-    "width": 736,
-    "height": 1104,
-    "alt": "Golf equipment overlooking a tree-lined clubhouse.",
     "approved": true
   },
   {
@@ -192,30 +156,6 @@
     "approved": true
   },
   {
-    "id": "C17",
-    "driveId": "1ggCLC-3dw5-R1rU19pwVxnfGW92c16iZ",
-    "sourceFilename": "aaba4672c90936770799b055a690445f.jpg",
-    "sourceSha256": "f52396fe904adb1d7bd938e0fd16b2b207848c0edaef67333f88ed3ce8ba5beb",
-    "kind": "image",
-    "sourcePath": "C17.jpg",
-    "width": 735,
-    "height": 935,
-    "alt": "A golfer on an open course beneath a blue sky.",
-    "approved": true
-  },
-  {
-    "id": "C18",
-    "driveId": "1ONF62VC9zm3j6hQ4KWYRlSVDLcj6sHnD",
-    "sourceFilename": "834f2bdfd1666de305abe17761e28da9.jpg",
-    "sourceSha256": "69fb258ab91279ae63c6e0757dbe4e01c3387d289785528e5ded0c278e148750",
-    "kind": "image",
-    "sourcePath": "C18.jpg",
-    "width": 1125,
-    "height": 1485,
-    "alt": "A woman beside a cart against dark green trees.",
-    "approved": true
-  },
-  {
     "id": "C19",
     "driveId": "1G3KA9pIZJW1ZDfsiXEhs7AOuyfanKCsB",
     "sourceFilename": "d911064cb0d3a7c11f78c8b274e20b80.jpg",
@@ -261,18 +201,6 @@
     "width": 563,
     "height": 752,
     "alt": "A green knit top and white pleated skirt in a seated pose.",
-    "approved": true
-  },
-  {
-    "id": "C23",
-    "driveId": "1O8TM4TvoEfCuff97PPcy75pfTcc4-toE",
-    "sourceFilename": "05c029b06d0687ce31efddb218940bf8.jpg",
-    "sourceSha256": "ad0ac47da6ce3bec8bd98f4352e2bcb3b87749c84f5c28de7e50980c2b6c3737",
-    "kind": "image",
-    "sourcePath": "C23.jpg",
-    "width": 736,
-    "height": 1019,
-    "alt": "A woman in a light outfit beside a golf cart.",
     "approved": true
   },
   {
@@ -396,18 +324,6 @@
     "approved": true
   },
   {
-    "id": "V04",
-    "driveId": "1rclSiPw3Dx3CI93D6TSGcDsOjHBvo9E7",
-    "sourceFilename": "ScreenRecording_09-23-2026 15-40-13_1.mp4",
-    "sourceSha256": "230e53db1554cf6b25cd4fc69937593c88b1c8853d578c4201084dcc700838ff",
-    "kind": "video",
-    "sourcePath": "V04.mp4",
-    "width": 980,
-    "height": 2130,
-    "alt": "Supplied Sunday Edit campaign footage V04.",
-    "approved": true
-  },
-  {
     "id": "V05",
     "driveId": "1--vVj2BwTHWnGQVxzq_mvPVJX104KxPT",
     "sourceFilename": "ScreenRecording_09-23-2026 15-40-40_1.mp4",
@@ -417,18 +333,6 @@
     "width": 1032,
     "height": 2244,
     "alt": "Supplied Sunday Edit campaign footage V05.",
-    "approved": true
-  },
-  {
-    "id": "V06",
-    "driveId": "1uS9BrMV_Vv-JdkhjDVTiTDrzTtiilz0k",
-    "sourceFilename": "ScreenRecording_09-23-2026 15-43-57_1.mp4",
-    "sourceSha256": "2723f379f6eb957460da376bf834f9a9e667ba067a58432a7d5a0b3c1b2d7e84",
-    "kind": "video",
-    "sourcePath": "V06.mp4",
-    "width": 998,
-    "height": 2168,
-    "alt": "Supplied Sunday Edit campaign footage V06.",
     "approved": true
   }
 ]

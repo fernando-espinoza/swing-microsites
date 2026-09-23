@@ -22,9 +22,9 @@ test('native film is playable without page scripts',async({browser,browserName})
  expect(await v.evaluate(v=>v.controls)).toBe(true);if(browserName==='firefox'){const height=await v.evaluate(v=>v.getBoundingClientRect().height);await v.click({position:{x:24,y:height-20}});}else{await v.evaluate(v=>v.play());}await expect.poll(()=>v.evaluate(v=>v.currentTime)).toBeGreaterThan(.1);await context.close();
 });
 
-test('six films loop automatically in view and pause offscreen',async({page})=>{
+test('four films loop automatically in view and pause offscreen',async({page})=>{
  await page.goto('/campaign/johnmontgomery/');
- const videos=page.locator('video');await expect(videos).toHaveCount(6);
+ const videos=page.locator('video');await expect(videos).toHaveCount(4);
  for(const video of await videos.all()){
   await video.scrollIntoViewIfNeeded();
   await expect.poll(()=>video.evaluate(v=>!v.paused&&v.currentTime>0&&v.muted&&v.loop)).toBe(true);

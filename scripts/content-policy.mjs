@@ -40,8 +40,8 @@ export function validateSite(site){
   safeLocalPath(a.sourcePath);ids.add(a.id);
  }
  const used=[...layout.hero,...layout.spreads.flat(),layout.story,...products.flatMap(p=>[p.front,p.back])];
- const expected=[...originals.values()].filter(a=>a.mimeType.startsWith('image/')).map(a=>a.reviewKey);
- if(used.length!==30||new Set(used).size!==30||expected.some(id=>!used.includes(id)||!ids.has(id))||used.some(id=>!expected.includes(id)))throw Error('All 30 approved photographs must appear exactly once');
+ const expected=[...originals.values()].filter(a=>a.mimeType.startsWith('image/')&&!(review.excludedAssetIds??[]).includes(a.reviewKey)).map(a=>a.reviewKey);
+ if(used.length!==expected.length||new Set(used).size!==expected.length||expected.some(id=>!used.includes(id)||!ids.has(id))||used.some(id=>!expected.includes(id)))throw Error('All selected approved photographs must appear exactly once');
  for(const f of films){
   if(!ids.has(f.sourceAssetId)||!originals.get(f.sourceAssetId)?.mimeType.startsWith('video/')||!Number.isSafeInteger(f.width)||!Number.isSafeInteger(f.height)||f.width<=0||f.height<=0)throw Error('Unreviewed film');
   for(const p of [f.src,f.posterSrc,...(f.captionSrc?[f.captionSrc]:[])])safeLocalPath(p);

@@ -4,7 +4,7 @@ Verified 2026-09-23 in the isolated `codex/sunday-edit` worktree. These are loca
 
 ## Automated evidence
 
-`npm run check`: 10 unit tests and 72 browser tests passed in the latest full run. Chromium, Firefox, and WebKit each exercise the complete editorial journey, five widths (320, 390, 768, 1024, 1440), no-JavaScript content, all product views, native film, reduced motion, failed media, keyboard navigation, and doubled text sizing.
+`npm run check`: 10 unit tests and 75 browser tests passed in the latest full run. Chromium, Firefox, and WebKit each exercise the complete editorial journey, five widths (320, 390, 768, 1024, 1440), no-JavaScript content, all product views, native film, reduced motion, failed media, keyboard navigation, and doubled text sizing.
 
 The release test scrolls to and decodes every campaign/product image, then plays the film and checks page errors and external requests. Axe WCAG 2.0/2.1/2.2 AA scans return no violations in all three engines. This is automated evidence, not a substitute for human accessibility review.
 
@@ -57,3 +57,5 @@ One Sunday Edit heading now separates two mixed-media collages, each containing 
 Caption and spacing refinement: zero figcaptions remain, while image alt text and product names stay intact. Desktop and mobile collages were inspected with varied column proportions, compact row spacing and uninterrupted white backgrounds. The full suite remains green (10 unit, 72 browser cases).
 
 Scrapbook overlaps verified visually on desktop and mobile; all 10 unit and 72 browser tests pass. Overlaps are limited to selected photographs, with white borders and separate mobile offsets.
+
+Latest row removal: second-collage rows 1 and 3 are absent; a regression checks the retained original spreads 5 and 7. Current artifact audit verifies 24 photographs and four videos. All 10 unit and 75 browser cases pass. Earlier media totals above document previous iterations.

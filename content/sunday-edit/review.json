@@ -42,5 +42,15 @@
   "exceptions": [
     "C06 retained unchanged by explicit user approval.",
     "Sheet Lusia back.webp mapped to supplied Luisa back.webp."
+  ],
+  "excludedAssetIds": [
+    "C07",
+    "C12",
+    "C08",
+    "C17",
+    "C18",
+    "C23",
+    "V04",
+    "V06"
   ]
 }

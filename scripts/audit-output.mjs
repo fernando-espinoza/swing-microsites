@@ -33,7 +33,7 @@ export function validateMarkup(html,site){
  }
  walk(parse(html));
  const expected=site.assets.filter(a=>a.kind==='image').map(a=>a.id);
- if(ids.length!==30||new Set(ids).size!==30||expected.some(id=>!ids.includes(id))||ids.some(id=>!expected.includes(id)))throw Error('Incomplete approved photography');
+ if(ids.length!==expected.length||new Set(ids).size!==expected.length||expected.some(id=>!ids.includes(id))||ids.some(id=>!expected.includes(id)))throw Error('Incomplete approved photography');
  if(headings.length!==1||headings[0]!==site.campaign.headline)throw Error('Wrong campaign heading');
  if(sections.join(',')!=='campaign,story,products')throw Error('Wrong editorial order');
  if(films<1||films!==site.films.length)throw Error('Campaign film missing');

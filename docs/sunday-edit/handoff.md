@@ -98,3 +98,5 @@ The video motion update supersedes the original click-to-play-only design. Initi
 Collage refinement: image and film captions (including front/back labels) are removed; descriptive alt text and product names remain. Row spacing is tighter, with a continuous white backdrop and distinct image/video proportions for each row. Positions are art-directed, not randomized per visit.
 
 Scrapbook treatment: selected photographs overlap adjacent photos with white mounted borders. Desktop and mobile use separate placements, leaving film frames and controls unobstructed.
+
+Latest selection change: at the user’s request, rows 1 and 3 of the second collage were removed (original spread numbers 4 and 6). This removes C07/C12/C08/V04 and C17/C18/C23/V06 from the page and public build. Original files remain in the private source archive. The page now uses 24 photos including the six product views, plus four videos. This supersedes prior all-media coverage requirements; approved omissions are recorded in review.json.
