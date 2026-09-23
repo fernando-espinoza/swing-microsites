@@ -1,0 +1,56 @@
+{
+  "approvedProductUrls": [],
+  "approvedProducts": [
+    {
+      "id": "kin-polo",
+      "name": "Kin Polo",
+      "description": "The Kin Polo reworks a classic short-sleeve polo with a relaxed, feminine silhouette. Crafted from stretch cotton piqué with a pigment garment wash, it features a structured flat-knit collar, ribbed cuffs and hem, and subtle embroidery at the chest.",
+      "front": "P04",
+      "back": "P03",
+      "href": null
+    },
+    {
+      "id": "clara-dress",
+      "name": "Clara Dress",
+      "description": "A refined knit polo dress designed with elevated texture, clean tailoring, and vintage sport influence throughout. The Clara Dress blends structured golf styling with modern femininity, featuring an engineered all-over pattern, rib knit detailing, and a sculpted silhouette that moves seamlessly between the course and everyday wear.",
+      "front": "P02",
+      "back": "P01",
+      "href": null
+    },
+    {
+      "id": "luisa-jacket",
+      "name": "Luisa Jacket",
+      "description": "Lightweight protection with a refined edge. The Luisa Jacket is designed to move effortlessly between performance and everyday wear—balancing clean structure with functional detail.",
+      "front": "P06",
+      "back": "P05",
+      "href": null
+    }
+  ],
+  "approvedCampaign": {
+    "title": "The Sunday Edit",
+    "collaboration": "Swing × John Montgomery",
+    "headline": "Forget the flowers. Book the tee time.",
+    "intro": "Introducing The Sunday Edit. Swing’s modern point of view meets John Montgomery’s classic style.",
+    "storyHeading": "A classic, in your own way.",
+    "story": "Swing’s modern point of view meets John Montgomery’s classic style. Crisp collars, considered layers, and fresh proportions—made for a Sunday on the course and the plans that follow.",
+    "basePath": "/campaign/johnmontgomery/",
+    "indexing": "noindex,nofollow",
+    "films": []
+  },
+  "fontStatus": "System type fallback; licensed font files outstanding.",
+  "approval": "User approved design and implementation plan on 2026-09-23.",
+  "exceptions": [
+    "C06 retained unchanged by explicit user approval.",
+    "Sheet Lusia back.webp mapped to supplied Luisa back.webp."
+  ],
+  "excludedAssetIds": [
+    "C07",
+    "C12",
+    "C08",
+    "C17",
+    "C18",
+    "C23",
+    "V04",
+    "V06"
+  ]
+}

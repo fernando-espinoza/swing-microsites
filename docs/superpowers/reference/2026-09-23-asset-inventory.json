@@ -1,0 +1,393 @@
+{
+  "reviewedOn": "2026-09-23",
+  "creativeFolder": "1ARxie1nNx2p4cJp_BmUay5cavDdpZJye",
+  "productFolder": "1DfT2CBq7qS6nm3dGIZrO7nh2Qmxe6fyI",
+  "campaign": [
+    {
+      "id": "1pzBER-2XaYPqkwb1jGBy6WRoBS1JImMQ",
+      "filename": "ScreenRecording_09-23-2026 15-43-09_1.mp4",
+      "mimeType": "video/mp4",
+      "bytes": 18451411,
+      "sourceUrl": "https://drive.google.com/file/d/1pzBER-2XaYPqkwb1jGBy6WRoBS1JImMQ/view?usp=drivesdk",
+      "reviewKey": "V01",
+      "sha256": "14e5ad496293f5a1e548e3c14516ce97e2c28eeef256eb197ab08a8af515f691"
+    },
+    {
+      "id": "1-UALJ7AJh4Lfg-curAE3q6qQeSg4GaWu",
+      "filename": "ScreenRecording_09-23-2026 15-41-27_1.mp4",
+      "mimeType": "video/mp4",
+      "bytes": 16613683,
+      "sourceUrl": "https://drive.google.com/file/d/1-UALJ7AJh4Lfg-curAE3q6qQeSg4GaWu/view?usp=drivesdk",
+      "reviewKey": "V02",
+      "sha256": "040e761e1b53aca3b78bad73dc7c4a4e9a6b9630c7889a0067c9cda60575c798"
+    },
+    {
+      "id": "1ss5g-7R0dL2AJQz7G1x5ZjeQvqxeYH86",
+      "filename": "ScreenRecording_09-23-2026 15-42-06_1.mp4",
+      "mimeType": "video/mp4",
+      "bytes": 13688495,
+      "sourceUrl": "https://drive.google.com/file/d/1ss5g-7R0dL2AJQz7G1x5ZjeQvqxeYH86/view?usp=drivesdk",
+      "reviewKey": "V03",
+      "sha256": "aa891c9103a77cf06f07dad903f69496447a4cf27ceaef746de5293daed2e6cd"
+    },
+    {
+      "id": "1rclSiPw3Dx3CI93D6TSGcDsOjHBvo9E7",
+      "filename": "ScreenRecording_09-23-2026 15-40-13_1.mp4",
+      "mimeType": "video/mp4",
+      "bytes": 15283038,
+      "sourceUrl": "https://drive.google.com/file/d/1rclSiPw3Dx3CI93D6TSGcDsOjHBvo9E7/view?usp=drivesdk",
+      "reviewKey": "V04",
+      "sha256": "230e53db1554cf6b25cd4fc69937593c88b1c8853d578c4201084dcc700838ff"
+    },
+    {
+      "id": "1--vVj2BwTHWnGQVxzq_mvPVJX104KxPT",
+      "filename": "ScreenRecording_09-23-2026 15-40-40_1.mp4",
+      "mimeType": "video/mp4",
+      "bytes": 12838252,
+      "sourceUrl": "https://drive.google.com/file/d/1--vVj2BwTHWnGQVxzq_mvPVJX104KxPT/view?usp=drivesdk",
+      "reviewKey": "V05",
+      "sha256": "713147c9883223d58b63ec13258796484981637f456e9c467db587fd81d4bb73"
+    },
+    {
+      "id": "1uS9BrMV_Vv-JdkhjDVTiTDrzTtiilz0k",
+      "filename": "ScreenRecording_09-23-2026 15-43-57_1.mp4",
+      "mimeType": "video/mp4",
+      "bytes": 27645804,
+      "sourceUrl": "https://drive.google.com/file/d/1uS9BrMV_Vv-JdkhjDVTiTDrzTtiilz0k/view?usp=drivesdk",
+      "reviewKey": "V06",
+      "sha256": "2723f379f6eb957460da376bf834f9a9e667ba067a58432a7d5a0b3c1b2d7e84"
+    },
+    {
+      "id": "17-WA0L_kftOMK5isRk-gt0JZNJDhxY3M",
+      "filename": "IMG_0223.JPG",
+      "mimeType": "image/jpeg",
+      "bytes": 541375,
+      "sourceUrl": "https://drive.google.com/file/d/17-WA0L_kftOMK5isRk-gt0JZNJDhxY3M/view?usp=drivesdk",
+      "reviewKey": "C01",
+      "width": 1006,
+      "height": 1468,
+      "sha256": "e0211f14eb457d4d320741be4f0f407c48bd78099854aec3cf99fad577342d26"
+    },
+    {
+      "id": "1wa3skwfvxaOnLEaVec6XM3rYfmawsEdX",
+      "filename": "36f1f229022a73a9fa2885e0cfcab96b.jpg",
+      "mimeType": "image/jpeg",
+      "bytes": 234302,
+      "sourceUrl": "https://drive.google.com/file/d/1wa3skwfvxaOnLEaVec6XM3rYfmawsEdX/view?usp=drivesdk",
+      "reviewKey": "C02",
+      "width": 1000,
+      "height": 1500,
+      "sha256": "5f0e40fc8a4cb2dbb8014ebaa3c09c676a174a37e078c61da323bc24ec987b37"
+    },
+    {
+      "id": "1SGLDM7p8ix5Fu5qUdxkJWS329iabSczO",
+      "filename": "60e2b5a8625fa2a21bca7cabf66a1bd1.jpg",
+      "mimeType": "image/jpeg",
+      "bytes": 122115,
+      "sourceUrl": "https://drive.google.com/file/d/1SGLDM7p8ix5Fu5qUdxkJWS329iabSczO/view?usp=drivesdk",
+      "reviewKey": "C03",
+      "width": 736,
+      "height": 920,
+      "sha256": "5533a49a22853b33f1f285912d5c4302753d34f87177befbf5b952fffd6e9822"
+    },
+    {
+      "id": "1fZIZokfnbQy7SPwTeeEVjSwFEWHcEzkq",
+      "filename": "a36f472d4062e198bb27ffdb3bcb3061.jpg",
+      "mimeType": "image/jpeg",
+      "bytes": 72122,
+      "sourceUrl": "https://drive.google.com/file/d/1fZIZokfnbQy7SPwTeeEVjSwFEWHcEzkq/view?usp=drivesdk",
+      "reviewKey": "C04",
+      "width": 505,
+      "height": 764,
+      "sha256": "67507f397cf734bf3c8aa2c9b3d5e2254cf3e772e566e5f3320e6e4716e0e68e"
+    },
+    {
+      "id": "1_Tnq9ZSqb1hLkgRfsh-SmqnjfJtWYVfC",
+      "filename": "897aa300e4cc4d478cd6e80c56ff9fb8.jpg",
+      "mimeType": "image/jpeg",
+      "bytes": 114329,
+      "sourceUrl": "https://drive.google.com/file/d/1_Tnq9ZSqb1hLkgRfsh-SmqnjfJtWYVfC/view?usp=drivesdk",
+      "reviewKey": "C05",
+      "width": 736,
+      "height": 920,
+      "sha256": "36a1b19ee30e83ccd420477a912852b23b5d35b955ab355a2bd0dcf48e1063ab"
+    },
+    {
+      "id": "1DaBKV4tVGu21RQ7dawJkiPmU0B3lXkXv",
+      "filename": "d4ee0e40cb72177d7d5aa2821d6594c5.jpg",
+      "mimeType": "image/jpeg",
+      "bytes": 131564,
+      "sourceUrl": "https://drive.google.com/file/d/1DaBKV4tVGu21RQ7dawJkiPmU0B3lXkXv/view?usp=drivesdk",
+      "reviewKey": "C06",
+      "width": 675,
+      "height": 1200,
+      "sha256": "eafcf48503a25a1bdbc3e70331084534ff8b6e316b1dd0a9a09c1d3b50c1d288"
+    },
+    {
+      "id": "1Ff8jAPGKNNsvnN23JvZTtis54gjFHeR4",
+      "filename": "ee1b3d6ad62489155cbbac81a62f6b23.jpg",
+      "mimeType": "image/jpeg",
+      "bytes": 136714,
+      "sourceUrl": "https://drive.google.com/file/d/1Ff8jAPGKNNsvnN23JvZTtis54gjFHeR4/view?usp=drivesdk",
+      "reviewKey": "C07",
+      "width": 861,
+      "height": 1166,
+      "sha256": "6734c605d016ac2b5b355bffd2e4d1ade3172643d88ab7069e2c8d7e9cf326ed"
+    },
+    {
+      "id": "1Bth7cAbcser4w36KU4G0nhRMMUmrPkNO",
+      "filename": "0cdbe42613c0dc79ce642d72e3bfb4fc.jpg",
+      "mimeType": "image/jpeg",
+      "bytes": 139070,
+      "sourceUrl": "https://drive.google.com/file/d/1Bth7cAbcser4w36KU4G0nhRMMUmrPkNO/view?usp=drivesdk",
+      "reviewKey": "C08",
+      "width": 736,
+      "height": 920,
+      "sha256": "241ffdb10f254ae6e4eedbfff6b84314d5c79f0fc4133339aedf557f8c59a0f4"
+    },
+    {
+      "id": "1z9KQioD5AlhefO4Yv4k8RdG6UH2EJ5lb",
+      "filename": "9ec6dd33a4e8c328888f91fe033ef5f1.jpg",
+      "mimeType": "image/jpeg",
+      "bytes": 203534,
+      "sourceUrl": "https://drive.google.com/file/d/1z9KQioD5AlhefO4Yv4k8RdG6UH2EJ5lb/view?usp=drivesdk",
+      "reviewKey": "C09",
+      "width": 1200,
+      "height": 1800,
+      "sha256": "abb382fbb95a0e58c988527471fbedb9001cf39aef4ca0fe3865c5a77c1b8447"
+    },
+    {
+      "id": "1p5wplhGP2Dx-3Do1H9rgr6IrkluSBJsG",
+      "filename": "04aa85aa4522494e01b5c5278c13e36e.jpg",
+      "mimeType": "image/jpeg",
+      "bytes": 134695,
+      "sourceUrl": "https://drive.google.com/file/d/1p5wplhGP2Dx-3Do1H9rgr6IrkluSBJsG/view?usp=drivesdk",
+      "reviewKey": "C10",
+      "width": 768,
+      "height": 1152,
+      "sha256": "dd32b4d1b5a4f9efddef5b49caeef0071a5aeaaaa466f4a77f67bf638c7d35ca"
+    },
+    {
+      "id": "1nROs2cOrH2e8ZFIaf7CmHCLaHG6pG-jI",
+      "filename": "3162aaaccccf8b1bb815034f5a749689.jpg",
+      "mimeType": "image/jpeg",
+      "bytes": 127196,
+      "sourceUrl": "https://drive.google.com/file/d/1nROs2cOrH2e8ZFIaf7CmHCLaHG6pG-jI/view?usp=drivesdk",
+      "reviewKey": "C11",
+      "width": 1125,
+      "height": 1384,
+      "sha256": "c874f6eebe029f9051bbb123b092757a899d65a6986b1e461b640ac13ea87978"
+    },
+    {
+      "id": "1tO65f66F8lGnjh8J9SL-P4h_yYlLL1_m",
+      "filename": "43694a995da85a6c308ee348dbaf9fc9.jpg",
+      "mimeType": "image/jpeg",
+      "bytes": 125669,
+      "sourceUrl": "https://drive.google.com/file/d/1tO65f66F8lGnjh8J9SL-P4h_yYlLL1_m/view?usp=drivesdk",
+      "reviewKey": "C12",
+      "width": 736,
+      "height": 1104,
+      "sha256": "9518d7e4617784a8c788564f706f41b4eb78ba48a81c6ad1731a8307a32f9f7b"
+    },
+    {
+      "id": "19i3xBk5r3WEF3Fvx-hivRdmF-wH0JjD-",
+      "filename": "049135a99cc94102e567877b0e242ff5.jpg",
+      "mimeType": "image/jpeg",
+      "bytes": 90168,
+      "sourceUrl": "https://drive.google.com/file/d/19i3xBk5r3WEF3Fvx-hivRdmF-wH0JjD-/view?usp=drivesdk",
+      "reviewKey": "C13",
+      "width": 736,
+      "height": 920,
+      "sha256": "d0ba65a5723f13bec573152b92e6824e099b631b7f470466882651f8d5678df1"
+    },
+    {
+      "id": "1z9n_6PPE9LO1CU3DEYq7MTtRCcIhlnWj",
+      "filename": "1e299d0296da29489bff54bebc32cfa9.jpg",
+      "mimeType": "image/jpeg",
+      "bytes": 112488,
+      "sourceUrl": "https://drive.google.com/file/d/1z9n_6PPE9LO1CU3DEYq7MTtRCcIhlnWj/view?usp=drivesdk",
+      "reviewKey": "C14",
+      "width": 736,
+      "height": 1104,
+      "sha256": "8ee4f39c3488e664ec4ad3f2f6ac7acac7f4aab969b6275d37c784bb8d4b9593"
+    },
+    {
+      "id": "1-iok-YiPlJONQJHxo9jwTeDtBXVhWAY1",
+      "filename": "1a589125ca443181e00ba77c1e559919.jpg",
+      "mimeType": "image/jpeg",
+      "bytes": 95652,
+      "sourceUrl": "https://drive.google.com/file/d/1-iok-YiPlJONQJHxo9jwTeDtBXVhWAY1/view?usp=drivesdk",
+      "reviewKey": "C15",
+      "width": 1080,
+      "height": 1440,
+      "sha256": "90a386cc77f959ad7629666e804811df750c61a06adf12cb07788bc69407187a"
+    },
+    {
+      "id": "149t0i2Iy13pkZDrq6k9eqpgWUIlcglTJ",
+      "filename": "156a4991e5075be6eac53abf1e3d2968.jpg",
+      "mimeType": "image/jpeg",
+      "bytes": 134881,
+      "sourceUrl": "https://drive.google.com/file/d/149t0i2Iy13pkZDrq6k9eqpgWUIlcglTJ/view?usp=drivesdk",
+      "reviewKey": "C16",
+      "width": 736,
+      "height": 1104,
+      "sha256": "4e097e7453b9f8fb1155e83dc8311c4a1c35589b577a8ad4a074c116fc076083"
+    },
+    {
+      "id": "1ggCLC-3dw5-R1rU19pwVxnfGW92c16iZ",
+      "filename": "aaba4672c90936770799b055a690445f.jpg",
+      "mimeType": "image/jpeg",
+      "bytes": 36792,
+      "sourceUrl": "https://drive.google.com/file/d/1ggCLC-3dw5-R1rU19pwVxnfGW92c16iZ/view?usp=drivesdk",
+      "reviewKey": "C17",
+      "width": 735,
+      "height": 935,
+      "sha256": "f52396fe904adb1d7bd938e0fd16b2b207848c0edaef67333f88ed3ce8ba5beb"
+    },
+    {
+      "id": "1ONF62VC9zm3j6hQ4KWYRlSVDLcj6sHnD",
+      "filename": "834f2bdfd1666de305abe17761e28da9.jpg",
+      "mimeType": "image/jpeg",
+      "bytes": 176128,
+      "sourceUrl": "https://drive.google.com/file/d/1ONF62VC9zm3j6hQ4KWYRlSVDLcj6sHnD/view?usp=drivesdk",
+      "reviewKey": "C18",
+      "width": 1125,
+      "height": 1485,
+      "sha256": "69fb258ab91279ae63c6e0757dbe4e01c3387d289785528e5ded0c278e148750"
+    },
+    {
+      "id": "1G3KA9pIZJW1ZDfsiXEhs7AOuyfanKCsB",
+      "filename": "d911064cb0d3a7c11f78c8b274e20b80.jpg",
+      "mimeType": "image/jpeg",
+      "bytes": 298359,
+      "sourceUrl": "https://drive.google.com/file/d/1G3KA9pIZJW1ZDfsiXEhs7AOuyfanKCsB/view?usp=drivesdk",
+      "reviewKey": "C19",
+      "width": 1158,
+      "height": 1736,
+      "sha256": "120df0495c9075d0409f916ebacb924826b5afb53dc6e6ae66bd6ea35cbd29f4"
+    },
+    {
+      "id": "1SNuu8moqvHMWKIM52q6jfQfwBeXffjvX",
+      "filename": "bc3a881e7a6279fae2c33882ec8f614d.jpg",
+      "mimeType": "image/jpeg",
+      "bytes": 117177,
+      "sourceUrl": "https://drive.google.com/file/d/1SNuu8moqvHMWKIM52q6jfQfwBeXffjvX/view?usp=drivesdk",
+      "reviewKey": "C20",
+      "width": 736,
+      "height": 920,
+      "sha256": "53429fdcc1ac5d62599f9180e3feb9a8cc797b735ad23b40cab59c3d87019c84"
+    },
+    {
+      "id": "10SflAYVjelDjIAGvuNmrDsMD2FaDCPFj",
+      "filename": "1f1da7c5b845a040e171298d955dce8e.jpg",
+      "mimeType": "image/jpeg",
+      "bytes": 114157,
+      "sourceUrl": "https://drive.google.com/file/d/10SflAYVjelDjIAGvuNmrDsMD2FaDCPFj/view?usp=drivesdk",
+      "reviewKey": "C21",
+      "width": 735,
+      "height": 919,
+      "sha256": "8390bcdda108a3b4fe3a38246cc9a66af9d4fe28e8809044143782640fbe9efb"
+    },
+    {
+      "id": "1ia76UPP8mlWS41UPlhfq28YWZhXffrHX",
+      "filename": "7353c06615128d0d799c1bc36a1c94a3.jpg",
+      "mimeType": "image/jpeg",
+      "bytes": 76261,
+      "sourceUrl": "https://drive.google.com/file/d/1ia76UPP8mlWS41UPlhfq28YWZhXffrHX/view?usp=drivesdk",
+      "reviewKey": "C22",
+      "width": 563,
+      "height": 752,
+      "sha256": "df3117134ce8a61d6ba64cd44072e608722249814197f1ed1ea087303e659c92"
+    },
+    {
+      "id": "1O8TM4TvoEfCuff97PPcy75pfTcc4-toE",
+      "filename": "05c029b06d0687ce31efddb218940bf8.jpg",
+      "mimeType": "image/jpeg",
+      "bytes": 140489,
+      "sourceUrl": "https://drive.google.com/file/d/1O8TM4TvoEfCuff97PPcy75pfTcc4-toE/view?usp=drivesdk",
+      "reviewKey": "C23",
+      "width": 736,
+      "height": 1019,
+      "sha256": "ad0ac47da6ce3bec8bd98f4352e2bcb3b87749c84f5c28de7e50980c2b6c3737"
+    },
+    {
+      "id": "11E6jyRL0JcUYhOsP6V2hc5PE9YuN3Aex",
+      "filename": "56f3588ce9c6fe6fd53b5a9990c838a9.jpg",
+      "mimeType": "image/jpeg",
+      "bytes": 99399,
+      "sourceUrl": "https://drive.google.com/file/d/11E6jyRL0JcUYhOsP6V2hc5PE9YuN3Aex/view?usp=drivesdk",
+      "reviewKey": "C24",
+      "width": 736,
+      "height": 981,
+      "sha256": "37248d3a9250036120a606e334b8c0d7e25ed9e08f6d729b10c2d140d53c1df2"
+    }
+  ],
+  "products": [
+    {
+      "id": "1ixd73p4alcqgJx7wOQ7bxDWR0_zQmeDQ",
+      "filename": "clara dress back.webp",
+      "mimeType": "image/webp",
+      "bytes": 409846,
+      "sourceUrl": "https://drive.google.com/file/d/1ixd73p4alcqgJx7wOQ7bxDWR0_zQmeDQ/view?usp=drivesdk",
+      "reviewKey": "P01",
+      "width": 2048,
+      "height": 2560,
+      "sha256": "2afb9c6c0b93a15e2eb9d094ecbf169704b7a2fae582c7b8e5b5e108550d2606"
+    },
+    {
+      "id": "1AwLZL6Udh6fm1f5Y6gufuLPsbg9dpChC",
+      "filename": "clara dress front.webp",
+      "mimeType": "image/webp",
+      "bytes": 525642,
+      "sourceUrl": "https://drive.google.com/file/d/1AwLZL6Udh6fm1f5Y6gufuLPsbg9dpChC/view?usp=drivesdk",
+      "reviewKey": "P02",
+      "width": 2048,
+      "height": 2560,
+      "sha256": "fbaa48f8c53541432602ce3692bdd5ff73edcbd3063cc93d74a50c0059a4f175"
+    },
+    {
+      "id": "1qOc8kf80RuMCe-WLuUbUO53zwLmHzhTt",
+      "filename": "Kin polo back.webp",
+      "mimeType": "image/webp",
+      "bytes": 102464,
+      "sourceUrl": "https://drive.google.com/file/d/1qOc8kf80RuMCe-WLuUbUO53zwLmHzhTt/view?usp=drivesdk",
+      "reviewKey": "P03",
+      "width": 2048,
+      "height": 2560,
+      "sha256": "bb3a48875386ccf7e4394cd6f8b6cbd2a1fc49d19455dec77f3bc71300053f75"
+    },
+    {
+      "id": "1ZaM6O9LIgpG4rAmlID0BuxCBc6FUuxbH",
+      "filename": "Kin polo front.webp",
+      "mimeType": "image/webp",
+      "bytes": 122146,
+      "sourceUrl": "https://drive.google.com/file/d/1ZaM6O9LIgpG4rAmlID0BuxCBc6FUuxbH/view?usp=drivesdk",
+      "reviewKey": "P04",
+      "width": 2048,
+      "height": 2560,
+      "sha256": "d0ec942a0bd1847e70f4b096c03272b6fed3d4898e738f1ade54a88e28d7f47c"
+    },
+    {
+      "id": "1OTCQxZ4QYrr51rs8rQScQViOtqqgtkF_",
+      "filename": "Luisa back.webp",
+      "mimeType": "image/webp",
+      "bytes": 94384,
+      "sourceUrl": "https://drive.google.com/file/d/1OTCQxZ4QYrr51rs8rQScQViOtqqgtkF_/view?usp=drivesdk",
+      "reviewKey": "P05",
+      "width": 2048,
+      "height": 2560,
+      "sha256": "c9edf1d3aadf63a938d62dcdff7b976a2ca73f6e18db3b9d5396060684c589f6"
+    },
+    {
+      "id": "152Ng2GYZ0-B1Sq-IChq0SHvYSl03XNBS",
+      "filename": "Luisa front.webp",
+      "mimeType": "image/webp",
+      "bytes": 146430,
+      "sourceUrl": "https://drive.google.com/file/d/152Ng2GYZ0-B1Sq-IChq0SHvYSl03XNBS/view?usp=drivesdk",
+      "reviewKey": "P06",
+      "width": 2048,
+      "height": 2560,
+      "sha256": "417b57a42454ea94b0c8ba49c66a85643dead450f054cbb5b5f3bae36fb9ed7b"
+    }
+  ]
+}
