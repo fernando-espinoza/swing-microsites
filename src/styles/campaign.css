@@ -75,3 +75,19 @@
 .swing-campaign .film-frame video{display:block;width:100%;height:auto;background:var(--navy)}
 .swing-campaign .film-frame figcaption{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;font-size:12px;line-height:1.5;margin-top:14px}
 @media(max-width:767px){.swing-campaign .film-band{padding:50px 24px}.swing-campaign .film-inner{grid-template-columns:1fr;gap:35px;max-width:540px}.swing-campaign .film-title{font-size:80px;margin:25px 0}.swing-campaign .film-title br{display:none}.swing-campaign .film-title br:after{content:' '}.swing-campaign .film-frame{max-width:330px;width:100%;justify-self:center}.swing-campaign .film-intro{font-size:18px}}
+.swing-campaign .products-intro{position:relative;margin-bottom:55px;padding-bottom:35px;border-bottom:1px solid var(--rule)}
+.swing-campaign .products-intro h2{font-size:80px;font-weight:400;line-height:1.1;letter-spacing:-.055em;margin-top:20px}
+.swing-campaign .selection-number{position:absolute;right:0;bottom:48px;font-size:13px;letter-spacing:.15em}
+.swing-campaign .products-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:38px}
+.swing-campaign .product-views{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,2fr);align-items:end;gap:10px}
+.swing-campaign .product-views img{object-fit:contain}
+.swing-campaign .product-views figcaption{font-size:10px;letter-spacing:.1em;padding-top:10px;text-transform:uppercase}
+.swing-campaign .product-title{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin:25px 0 12px}
+.swing-campaign .product-title h3{font-size:32px;line-height:1.2;font-weight:400;letter-spacing:-.03em}
+.swing-campaign .product-title>span{font-size:12px;color:var(--brown)}
+.swing-campaign .product-description{font-size:17px;line-height:1.65;max-width:43ch}
+.swing-campaign .product-card a{display:block}.swing-campaign .product-card a:hover{text-decoration:underline;text-underline-offset:5px}
+.swing-campaign .campaign-colophon{border-top:1px solid var(--rule);padding:30px 0 4px;margin-top:65px;display:flex;align-items:center;gap:15px}
+.swing-campaign .campaign-colophon .wordmark{font-size:32px}.swing-campaign .campaign-colophon>p{font-size:16px}.swing-campaign .edition-signature{font-style:italic;margin-left:auto;font-size:17px}
+@media(max-width:767px){.swing-campaign .products-intro{margin-bottom:35px;padding-bottom:28px}.swing-campaign .products-intro h2{font-size:56px}.swing-campaign .selection-number{display:none}.swing-campaign .products-grid{grid-template-columns:1fr;gap:45px;max-width:540px;margin:auto}.swing-campaign .product-views{gap:12px}.swing-campaign .product-title h3{font-size:34px}.swing-campaign .product-description{max-width:none}.swing-campaign .campaign-colophon{flex-wrap:wrap;gap:10px;margin-top:40px}.swing-campaign .edition-signature{font-size:14px}.swing-campaign .campaign-colophon>p{font-size:14px}}
+@media(max-width:350px){.swing-campaign .product-views{grid-template-columns:1fr;gap:22px}.swing-campaign .product-back{width:70%;justify-self:end}.swing-campaign .edition-signature{flex-basis:100%;margin-top:8px}.swing-campaign .film-title{font-size:68px}}
