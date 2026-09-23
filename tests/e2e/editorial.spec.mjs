@@ -18,3 +18,13 @@ test('no JavaScript keeps images, story and collection anchor',async({browser})=
  await expect(page.locator('img[data-asset-id^="C"]')).toHaveCount(24);await expect(page.locator('#story h2')).toHaveText('A classic, in your own way.');
  await page.getByRole('link',{name:'Explore the collection'}).click();await expect(page).toHaveURL(/#products$/);await context.close();
 });
+test('one Sunday Edit section sits between two mixed-media collages',async({page})=>{
+ await page.goto('/campaign/johnmontgomery/');
+ await expect(page.getByRole('heading',{name:'The Sunday Edit',exact:true})).toHaveCount(1);
+ expect(await page.locator('[data-chapter]').evaluateAll(nodes=>nodes.map(n=>n.dataset.chapter))).toEqual(['intro','collage-one','sunday-edit','collage-two','story','products']);
+ for(const id of ['collage-one','collage-two']){
+  await expect(page.locator('[data-chapter="'+id+'"] video')).toHaveCount(3);
+  expect(await page.locator('[data-chapter="'+id+'"] img[data-asset-id]').count()).toBeGreaterThan(0);
+ }
+ await expect(page.locator('.film-copy')).toHaveCount(0);
+});

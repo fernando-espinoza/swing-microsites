@@ -94,13 +94,22 @@
 
 .swing-campaign .film-copy,.swing-campaign .partner-name{min-width:0;overflow-wrap:anywhere}
 
-/* Alternating motion interludes keep the six films within the editorial rhythm. */
-.swing-campaign .film-band-3,.swing-campaign .film-band-5{background:var(--green)}
-.swing-campaign .film-band-2,.swing-campaign .film-band-4,.swing-campaign .film-band-6{background:#f5f6f3;color:var(--navy)}
-.swing-campaign .film-band-2 .film-frame,.swing-campaign .film-band-4 .film-frame,.swing-campaign .film-band-6 .film-frame{grid-column:1;grid-row:1}
-.swing-campaign .film-band-2 .film-inner,.swing-campaign .film-band-4 .film-inner,.swing-campaign .film-band-6 .film-inner{grid-template-columns:330px minmax(0,1fr)}
-.swing-campaign .film-band-2 .film-copy,.swing-campaign .film-band-4 .film-copy,.swing-campaign .film-band-6 .film-copy{grid-column:2}
+
+/* Mixed-media spreads with one quiet campaign title between the two collages. */
+.swing-campaign .motion-spread{align-items:start}
+.swing-campaign .motion-spread .image-1{grid-column:1/4;grid-row:1;margin-top:30px}
+.swing-campaign .motion-spread .image-2{grid-column:4/7;grid-row:1;margin-top:150px}
+.swing-campaign .motion-spread .film-frame{grid-column:7/10;grid-row:1;min-width:0;margin-top:0}
+.swing-campaign .motion-spread .image-3{grid-column:10/13;grid-row:1;margin-top:220px}
+.swing-campaign .sunday-feature{background:var(--navy);color:white;text-align:center;padding:100px 24px}
+.swing-campaign .sunday-feature h2{font-family:var(--script);font-style:italic;font-weight:400;font-size:clamp(60px,8vw,120px);line-height:1.15;letter-spacing:-.05em;margin:25px auto;overflow-wrap:anywhere}
+.swing-campaign .sunday-feature>p:last-child{max-width:36ch;margin:auto;font-size:22px;line-height:1.6}
 @media(max-width:767px){
-.swing-campaign .film-band .film-inner{grid-template-columns:minmax(0,1fr)}
-.swing-campaign .film-band .film-copy,.swing-campaign .film-band .film-frame{grid-column:1;grid-row:auto}
+.swing-campaign .motion-spread{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 14px}
+.swing-campaign .motion-spread .image-1{grid-column:1;grid-row:1;width:100%;margin:0}
+.swing-campaign .motion-spread .film-frame{grid-column:2;grid-row:1;width:100%;margin:35px 0 0}
+.swing-campaign .motion-spread .image-2{grid-column:1;grid-row:2;width:100%;margin:-15px 0 0}
+.swing-campaign .motion-spread .image-3{grid-column:2;grid-row:2;width:100%;margin:45px 0 0}
+.swing-campaign .editorial-image figcaption{flex-wrap:wrap}
+.swing-campaign .sunday-feature{padding:70px 24px}
 }

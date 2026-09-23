@@ -4,13 +4,13 @@ Verified 2026-09-23 in the isolated `codex/sunday-edit` worktree. These are loca
 
 ## Automated evidence
 
-`npm run check`: 10 unit tests and 69 browser tests passed in the latest full run. Chromium, Firefox, and WebKit each exercise the complete editorial journey, five widths (320, 390, 768, 1024, 1440), no-JavaScript content, all product views, native film, reduced motion, failed media, keyboard navigation, and doubled text sizing.
+`npm run check`: 10 unit tests and 72 browser tests passed in the latest full run. Chromium, Firefox, and WebKit each exercise the complete editorial journey, five widths (320, 390, 768, 1024, 1440), no-JavaScript content, all product views, native film, reduced motion, failed media, keyboard navigation, and doubled text sizing.
 
 The release test scrolls to and decodes every campaign/product image, then plays the film and checks page errors and external requests. Axe WCAG 2.0/2.1/2.2 AA scans return no violations in all three engines. This is automated evidence, not a substitute for human accessibility review.
 
 Policy tests reject changed source bytes, missing files, traversal, escaping source symlinks, unknown/omitted IDs, changed product descriptions, and unapproved destinations. Output auditing parses actual HTML, rejects active inline content/external resources, and verifies hashed output bytes. No signed Drive URLs are checked in or shipped.
 
-Output audit: 30 distinct source photographs and six supplied films. Gzipped JS: 706 bytes. Gzipped CSS: 3,193 bytes. Alternative image files total 23,073,851 bytes in storage; a visitor fetches only selected responsive candidates. All three browsers pass the 1 MiB initial-media and 8 MiB complete-visit image-transfer budgets, with reduced motion enabled for image-only measurement. Normal playback requests films as they enter view.
+Output audit: 30 distinct source photographs and six supplied films. Gzipped JS: 706 bytes. Gzipped CSS: 3,292 bytes. Alternative image files total 23,073,851 bytes in storage; a visitor fetches only selected responsive candidates. All three browsers pass the 1 MiB initial-media and 8 MiB complete-visit image-transfer budgets, with reduced motion enabled for image-only measurement. Normal playback requests films as they enter view.
 
 ## Performance sample (initial single-film build)
 
@@ -49,3 +49,7 @@ The reviewer did not certify final fonts, creative approval, physical devices, s
 ## Motion update verification
 
 All six clips automatically play muted and loop when visible in Chromium, Firefox and WebKit. Tests verify offscreen pause, reduced-motion changes, persistent manual pause, failed requests and no-script controls. Axe scans pass after fixing alternating-panel contrast. Desktop and mobile motion panels were visually inspected. All 30 photographs remain present.
+
+## Revised editorial sequence
+
+One Sunday Edit heading now separates two mixed-media collages, each containing three videos. A regression test verifies the exact six-part reading order and absence of repeated film-copy panels. All 10 unit and 72 browser checks pass; mobile and desktop collage compositions were inspected.

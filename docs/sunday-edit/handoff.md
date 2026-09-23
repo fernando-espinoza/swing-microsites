@@ -89,7 +89,7 @@ An ignored local `artifacts/` directory may contain the packaged public page. Th
 
 ## Approved motion update
 
-All six supplied videos appear between the photographic spreads. JavaScript starts muted looping playback only when at least 25% of the frame is visible. Offscreen films and hidden-tab playback pause. A manual pause remains respected. Reduced-motion users and no-JavaScript users retain native click-to-play controls; autoplay denial leaves the poster and controls usable.
+All six supplied videos appear inside two mixed-media collages (three videos in each). The page follows the user-requested order: intro, first collage, one Sunday Edit section, second collage, collaboration explanation, Shop the Edit. JavaScript starts muted looping playback only when at least 25% of the frame is visible. Offscreen films and hidden-tab playback pause. A manual pause remains respected. Reduced-motion users and no-JavaScript users retain native click-to-play controls; autoplay denial leaves the poster and controls usable.
 
 Every clip retains its full supplied visual frame, including embedded overlays/branding, as explicitly approved. Sound is removed. Use the private source bundle to reproduce exact derivative hashes. For V02–V06 the encoder settings above use scale=720:-2, preset fast, and full duration; poster frames are taken at 0.5 seconds. The campaign manifest contains dimensions and source/derivative checksums.
 
