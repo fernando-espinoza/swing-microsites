@@ -180,3 +180,8 @@
 .swing-campaign .editorial .spread-7 .image-3{margin-top:-30px;z-index:2;border:6px solid white}
 }
 @media(min-width:768px){.swing-campaign .editorial .spread-7 figure{grid-row:1}}
+
+/* Allow enlarged fallback-font text to reflow within the story grid. */
+.swing-campaign .story-inner{grid-template-columns:repeat(2,minmax(0,1fr))}
+.swing-campaign .story-copy{min-width:0;overflow-wrap:anywhere}
+@media(max-width:767px){.swing-campaign .story-inner{grid-template-columns:minmax(0,1fr)}}

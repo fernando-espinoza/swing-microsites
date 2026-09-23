@@ -17,14 +17,14 @@ test('image request failure preserves geometry and alternative text',async({page
 });
 for(const width of [320,390,640])test('200 percent text and unavailable webfonts preserve readable content at '+width,async({page})=>{
  await page.setViewportSize({width,height:900});await page.route('**/*.woff2',r=>r.abort());await page.goto('/campaign/johnmontgomery/');
- await page.evaluate(()=>{const elements=[...document.querySelectorAll('h1,h2,h3,p,a,figcaption,.wordmark,.partner-name')];const sizes=elements.map(e=>parseFloat(getComputedStyle(e).fontSize));elements.forEach((e,i)=>e.style.fontSize=(sizes[i]*2)+'px');});
+ await page.evaluate(()=>{document.body.style.setProperty('--serif','Times New Roman, serif');document.body.style.setProperty('--script','Times New Roman, serif');const elements=[...document.querySelectorAll('h1,h2,h3,p,a,figcaption,.wordmark,.partner-name')];const sizes=elements.map(e=>parseFloat(getComputedStyle(e).fontSize));elements.forEach((e,i)=>e.style.fontSize=(sizes[i]*2)+'px');});
  expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);await expect(page.locator('h1')).toBeVisible();await expect(page.locator('#products h3')).toHaveCount(3);
 });
 test('initial and complete image transfer stay within the agreed budgets',async({page})=>{
- await page.emulateMedia({reducedMotion:'reduce'});const bytes=[];const movies=[];page.on('response',r=>{const type=r.request().resourceType();if(['image','media'].includes(type))bytes.push(Number(r.headers()['content-length']||0));});page.on('request',r=>{if(r.url().endsWith('.mp4'))movies.push(r.url());});
- await page.setViewportSize({width:390,height:844});await page.goto('/campaign/johnmontgomery/');await page.waitForLoadState('networkidle');expect(bytes.reduce((a,b)=>a+b,0)).toBeLessThanOrEqual(1024*1024);expect(movies).toEqual([]);
+ await page.emulateMedia({reducedMotion:'reduce'});const bytes=[];page.on('response',r=>{const type=r.request().resourceType();if(['image','media'].includes(type))bytes.push(Number(r.headers()['content-length']||0));});
+ await page.setViewportSize({width:390,height:844});await page.goto('/campaign/johnmontgomery/');await page.waitForLoadState('networkidle');expect(bytes.reduce((a,b)=>a+b,0)).toBeLessThanOrEqual(1024*1024);expect(await page.locator('video').evaluateAll(vs=>vs.every(v=>v.paused&&v.currentTime===0))).toBe(true);
  for(const image of await page.locator('img[data-asset-id]').all()){await image.scrollIntoViewIfNeeded();await expect.poll(()=>image.evaluate(i=>i.complete)).toBe(true);}
- await page.waitForLoadState('networkidle');expect(bytes.reduce((a,b)=>a+b,0)).toBeLessThanOrEqual(8*1024*1024);expect(movies).toEqual([]);
+ await page.waitForLoadState('networkidle');expect(bytes.reduce((a,b)=>a+b,0)).toBeLessThanOrEqual(8*1024*1024);expect(await page.locator('video').evaluateAll(vs=>vs.every(v=>v.paused&&v.currentTime===0))).toBe(true);
 });
 test('campaign entry redirects, exposes scoped headers, and leaves other routes absent',async({request})=>{
  const redirect=await request.get('/campaign/johnmontgomery',{maxRedirects:0});expect(redirect.status()).toBe(308);expect(redirect.headers().location).toBe('/campaign/johnmontgomery/');

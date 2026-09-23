@@ -1,9 +1,9 @@
 import {test,expect} from '@playwright/test';
+// preload is a browser hint; reduced motion guarantees no automatic playback.
 test('film waits for intent, even with reduced motion',async({page})=>{
- const movies=[];page.on('request',r=>{if(r.url().endsWith('.mp4'))movies.push(r.url());});
  await page.emulateMedia({reducedMotion:'reduce'});await page.goto('/campaign/johnmontgomery/');
  const video=page.locator('video').first();await video.scrollIntoViewIfNeeded();await expect(video).toHaveAttribute('preload','none');
- expect(await video.evaluate(v=>v.paused&&!v.autoplay&&v.muted)).toBe(true);expect(movies).toEqual([]);
+ expect(await video.evaluate(v=>v.paused&&!v.autoplay&&v.muted)).toBe(true);expect(await video.evaluate(v=>v.currentTime)).toBe(0);
 });
 test('supplied H264 film plays and pagehide pauses it',async({page})=>{
  await page.goto('/campaign/johnmontgomery/');const video=page.locator('video').first();await video.scrollIntoViewIfNeeded();

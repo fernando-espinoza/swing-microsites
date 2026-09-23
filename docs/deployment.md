@@ -46,6 +46,6 @@ Main should require the `Build and verify microsites` check and the Vercel check
 
 Retain the previous successful production deployment and commit. If a release fails, use Vercel's verified previous project deployment only after checking that it preserves all currently required campaign routes; reverting a whole project can otherwise remove a newer unrelated campaign. Prefer a reviewed revert PR for a persistent source correction. Never roll back the parent website.
 
-## Initial setup status
+## Setup verification
 
-The skill is installed and validated. The private media repository and read-only deploy key exist. GitHub Actions has the raw key secret; Vercel has the base64 Secret for both Preview and Production. Media restoration and static packaging pass locally. The first PR/CI/preview and main protection are being verified before the workflow is declared live. The user explicitly approved main protection after CI becomes available. Production deployment is deliberately not part of bootstrap.
+The skill is installed and validated. The private media repository and read-only deploy key exist. GitHub Actions has the raw key secret; Vercel has the base64 Secret for both Preview and Production. Media restoration and static packaging pass locally. PR #1 exercises the complete workflow. Require successful checks at the latest PR head before release; branch protection is configured in GitHub, independently of this document. Marketing requested previews accessible to anyone with the link; Vercel Authentication is disabled for this project. Preview pages retain noindex headers. Production deployment is deliberately not part of bootstrap.
