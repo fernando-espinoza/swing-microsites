@@ -74,3 +74,9 @@ Use a photography-led cover meanwhile. Video is still a tracked part of the crea
 
 All 24 campaign images are assigned once: two cover images, 21 spread images, one story image. All six product images appear in the product section. Seven editorial spreads plus a story preserve the brief’s three main sections. No asset is excluded because it is visually inconvenient.
 
+
+## Implementation review, 2026-09-23
+
+Software decoding with FFmpeg 7.1 succeeded for all six HEVC clips. Sampled frames from every clip were inspected; V01 was reviewed throughout its 10.95 seconds using half-second frames. Selected V01: woman in green beside/in a golf cart, consistent framing, no visible player interface or unrelated insert. V02/V05 have visible interface corners; V04 has embedded headline; V03/V05 include other explicit branding; V06 is a coastal golf sequence. Only V01 is used.
+
+V01 is encoded H.264/yuv420p at 720×1564, 30fps, CRF23, fast-start, without audio. Its poster is from 0.5 seconds of the original. Original and derivative SHA-256 values are recorded; the silent scene has no dialogue or instructional information requiring a speech transcript. Browser playback is checked separately in QA. No content was generated or substituted.

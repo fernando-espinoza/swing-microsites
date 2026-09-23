@@ -7,5 +7,19 @@
   "story": "Swing’s modern point of view meets John Montgomery’s classic style. Crisp collars, considered layers, and fresh proportions—made for a Sunday on the course and the plans that follow.",
   "basePath": "/campaign/johnmontgomery/",
   "indexing": "noindex,nofollow",
-  "films": []
+  "films": [
+    {
+      "sourceAssetId": "V01",
+      "width": 720,
+      "height": 1564,
+      "posterAlt": "A woman in a green polo seated in a golf cart.",
+      "sourceStartSeconds": 0,
+      "sourceEndSeconds": 10.946667,
+      "captionSrc": null,
+      "src": "assets/V01-film-005a673e726c.mp4",
+      "srcSha256": "005a673e726c6fb0d6e92126dce200a3954285f14f30d97b8e8dce2efa5237a7",
+      "posterSrc": "assets/V01-poster-8819662c222e.jpg",
+      "posterSrcSha256": "8819662c222e5860cc88708cba52337ff89113d4f1ad0ef13189bb793972872b"
+    }
+  ]
 }

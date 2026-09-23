@@ -358,5 +358,17 @@
     "height": 2560,
     "alt": "Luisa Jacket, front view.",
     "approved": true
+  },
+  {
+    "id": "V01",
+    "driveId": "1pzBER-2XaYPqkwb1jGBy6WRoBS1JImMQ",
+    "sourceFilename": "ScreenRecording_09-23-2026 15-43-09_1.mp4",
+    "sourceSha256": "14e5ad496293f5a1e548e3c14516ce97e2c28eeef256eb197ab08a8af515f691",
+    "kind": "video",
+    "sourcePath": "V01.mp4",
+    "width": 964,
+    "height": 2094,
+    "alt": "A woman in a green polo sitting in a golf cart.",
+    "approved": true
   }
 ]
