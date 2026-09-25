@@ -19,7 +19,7 @@ test('static build writes only campaign output with resolved image references',a
  try{
   const site=await loadSite();await build({outDir:root,site,sourceRoot:'assets-source/sunday-edit'});
   const html=await readFile(join(root,'campaign/johnmontgomery/index.html'),'utf8');
-  assert.match(html,/Forget the flowers/);assert.ok(!html.includes('drive.google.com'));
+  assert.match(html,/Nothing better than/);assert.ok(!html.includes('drive.google.com'));
   await assert.rejects(access(join(root,'index.html')));
   for(const match of html.matchAll(/(?:src|href)="(\/campaign\/johnmontgomery\/assets\/[^" ]+)"/g))await access(join(root,match[1]));
   const changed=structuredClone(site);changed.products[0].href='https://evil.example/p';await assert.rejects(build({outDir:root,site:changed,sourceRoot:'assets-source/sunday-edit'}));
