@@ -15,7 +15,7 @@ for(const width of [320,390,768,1024,1440])test('no horizontal overflow at '+wid
 test('no JavaScript keeps images, story and collection anchor',async({browser})=>{
  const context=await browser.newContext({javaScriptEnabled:false,viewport:{width:390,height:844}});const page=await context.newPage();
  await page.goto('http://127.0.0.1:4173/campaign/johnmontgomery/');
- await expect(page.locator('img[data-asset-id^="C"]')).toHaveCount(18);await expect(page.locator('#story h2')).toHaveText('Old school prep, with moden vibes');
+ await expect(page.locator('img[data-asset-id^="C"]')).toHaveCount(18);await expect(page.locator('#story h2')).toHaveText('A classic, in your own way.');
  await page.getByRole('link',{name:'Explore the collection'}).click();await expect(page).toHaveURL(/#products$/);await context.close();
 });
 test('one Sunday Edit section sits between two mixed-media collages',async({page})=>{
